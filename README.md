@@ -22,6 +22,12 @@ Los usuarios eligen "especializarse" en roles (agricultor, artesano, comerciante
 
 Cada especialización multiplica su productividad en ciertas tareas.
 
+
+
+https://github.com/user-attachments/assets/bcf85174-f3ca-4aa9-91d6-69eda9c9f572
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------
 Capítulo 2: "Del principio que da lugar a la división del trabajo"
 Conceptos Clave:
