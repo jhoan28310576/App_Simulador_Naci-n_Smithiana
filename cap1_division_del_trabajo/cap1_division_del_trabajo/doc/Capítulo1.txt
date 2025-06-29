@@ -1,0 +1,35 @@
+Capítulo 1: "De la división del trabajo"
+Conceptos Clave:
+Ejemplo de la fábrica de alfileres:
+
+10 trabajadores especializados (estirar alambre, cortar, afilar, etc.) producen 48,000 alfileres/día.
+
+1 trabajador no especializado produciría menos de 20 alfileres/día.
+
+Tres ventajas de la división del trabajo:
+
+Mayor destreza en tareas específicas (ej: un herrero solo forja clavos).
+
+Ahorro de tiempo al no cambiar de tarea.
+
+Innovación tecnológica (máquinas especializadas).
+
+Aplicación en tu App:
+Simulación de productividad:
+
+python
+# Ejemplo de código para calcular producción basada en especialización
+def calcular_produccion(trabajadores, especializacion):
+    base = 20  # Producción sin división del trabajo
+    if especializacion:
+        return trabajadores * 4800  # 48,000/10 trabajadores
+    else:
+        return trabajadores * base
+
+print(calcular_produccion(10, True))  # Output: 48,000
+print(calcular_produccion(10, False)) # Output: 200
+Implementa en tu app:
+
+Los usuarios eligen "especializarse" en roles (agricultor, artesano, comerciante).
+
+Cada especialización multiplica su productividad en ciertas tareas.

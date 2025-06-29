@@ -1,0 +1,39 @@
+Capítulo 3: "La división del trabajo está limitada por la extensión del mercado"
+Conceptos Clave:
+Relación mercado-especialización:
+
+Mercados pequeños → Menos especialización (ej: un herrero rural hace herramientas y clavos).
+
+Mercados grandes → Alta especialización (ej: fábricas urbanas con roles específicos).
+
+Infraestructura y comercio:
+
+Canales navegables permitieron mayor comercio → Revolución Industrial.
+
+Aplicación en tu App:
+Módulo de expansión de mercado:
+
+Los usuarios empiezan en una aldea (mercado pequeño) y pueden:
+
+Construir caminos/mercados para aumentar su radio comercial.
+
+Especializarse más al llegar a ciudades virtuales.
+
+javascript
+// Ejemplo de lógica de expansión
+class Mercado {
+  constructor() {
+    this.radio = 10; // km
+    this.especializacion = 1; // 1-5 niveles
+  }
+
+  expandir(infraestructura) {
+    this.radio += infraestructura.carreteras * 5;
+    this.especializacion = Math.min(5, Math.floor(this.radio / 20));
+  }
+}
+
+let aldea = new Mercado();
+aldea.expandir({carreteras: 3});
+console.log(aldea.especializacion); // Output: 1 (15km → nivel 1)
+

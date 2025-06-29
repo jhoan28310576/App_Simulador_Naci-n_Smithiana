@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Expansión de Mercado - División del Trabajo</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/expansion.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/assets/logo/Logo64x64.png" alt="logo" />
+            <h1>LOGO</h1>
+        </div>
+        <ul>
+            <li>
+                <a href="/">fábrica de alfileres</a>
+            </li>
+            <li>
+                <a href="/trueque">Sistema de trueque inteligente</a>
+            </li>
+            <li>
+                <a href="/expansion">Módulo de expansión de mercado</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+    <div class="menubar">
+        <ul>
+            <li>
+                <a href="/">fábrica de alfileres</a>
+            </li>
+            <li>
+                <a href="/trueque">Sistema de trueque inteligente</a>
+            </li>
+            <li>
+                <a href="/expansion">Módulo de expansión de mercado</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <main class="main-content">
+            <!-- Header con teoría -->
+            <div class="theory-header">
+                <h1><i class="fas fa-chart-line"></i> Módulo de Expansión de Mercado</h1>
+                <p class="theory-quote">
+                    <i class="fas fa-quote-left"></i>
+                    "La división del trabajo está limitada por la extensión del mercado"
+                    <i class="fas fa-quote-right"></i>
+                    <br><span class="author">- Adam Smith, Capítulo 3</span>
+                </p>
+            </div>
+
+            <!-- Panel de Control del Mercado -->
+            <div class="market-control-panel">
+                <div class="market-info">
+                    <div class="market-stat">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="marketRadius">10</span>
+                        <label>Radio del Mercado (km)</label>
+                    </div>
+                    <div class="market-stat">
+                        <i class="fas fa-users"></i>
+                        <span id="marketPopulation">50</span>
+                        <label>Población</label>
+                    </div>
+                    <div class="market-stat">
+                        <i class="fas fa-star"></i>
+                        <span id="specializationLevel">1</span>
+                        <label>Nivel de Especialización</label>
+                    </div>
+                    <div class="market-stat">
+                        <i class="fas fa-coins"></i>
+                        <span id="marketValue">1000</span>
+                        <label>Valor del Mercado</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simulador de Expansión -->
+            <div class="expansion-simulator">
+                <div class="simulator-controls">
+                    <h2><i class="fas fa-cogs"></i> Simulador de Expansión</h2>
+                    
+                    <div class="infrastructure-controls">
+                        <h3>Infraestructura</h3>
+                        <div class="control-group">
+                            <label for="roadsInput">Carreteras:</label>
+                            <input type="range" id="roadsInput" min="0" max="10" value="0" class="slider">
+                            <span id="roadsValue">0</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="portsInput">Puertos:</label>
+                            <input type="range" id="portsInput" min="0" max="5" value="0" class="slider">
+                            <span id="portsValue">0</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="marketsInput">Mercados:</label>
+                            <input type="range" id="marketsInput" min="0" max="8" value="0" class="slider">
+                            <span id="marketsValue">0</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="warehousesInput">Almacenes:</label>
+                            <input type="range" id="warehousesInput" min="0" max="6" value="0" class="slider">
+                            <span id="warehousesValue">0</span>
+                        </div>
+                    </div>
+
+                    <div class="expansion-actions">
+                        <button id="expandBtn" class="btn btn-primary">
+                            <i class="fas fa-expand-arrows-alt"></i> Expandir Mercado
+                        </button>
+                        <button id="resetBtn" class="btn btn-secondary">
+                            <i class="fas fa-undo"></i> Reiniciar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="market-visualization">
+                    <div class="market-map">
+                        <div class="market-center">
+                            <i class="fas fa-city"></i>
+                            <span>Centro</span>
+                        </div>
+                        <div class="market-rings">
+                            <div class="ring ring-1" id="ring1"></div>
+                            <div class="ring ring-2" id="ring2"></div>
+                            <div class="ring ring-3" id="ring3"></div>
+                            <div class="ring ring-4" id="ring4"></div>
+                            <div class="ring ring-5" id="ring5"></div>
+                        </div>
+                        <div class="infrastructure-markers" id="infrastructureMarkers"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs de Análisis -->
+            <div class="analysis-tabs">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="specialization">
+                        <i class="fas fa-star"></i> Especialización
+                    </button>
+                    <button class="tab-btn" data-tab="workers">
+                        <i class="fas fa-users"></i> Trabajadores
+                    </button>
+                    <button class="tab-btn" data-tab="production">
+                        <i class="fas fa-industry"></i> Producción
+                    </button>
+                    <button class="tab-btn" data-tab="trade">
+                        <i class="fas fa-exchange-alt"></i> Comercio
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Tab: Especialización -->
+                    <div id="specialization" class="tab-pane active">
+                        <div class="specialization-analysis">
+                            <h3>Análisis de Especialización por Nivel de Mercado</h3>
+                            <div class="specialization-levels">
+                                <div class="level-card" data-level="1">
+                                    <div class="level-header">
+                                        <h4>Nivel 1: Aldea</h4>
+                                        <span class="level-range">0-20 km</span>
+                                    </div>
+                                    <div class="level-description">
+                                        <p><strong>Especialización:</strong> Mínima</p>
+                                        <p><strong>Ejemplo:</strong> Herrero rural hace herramientas y clavos</p>
+                                        <p><strong>Roles:</strong> 3-5 especializaciones básicas</p>
+                                    </div>
+                                    <div class="level-indicators">
+                                        <div class="indicator active" id="level1-indicator"></div>
+                                    </div>
+                                </div>
+
+                                <div class="level-card" data-level="2">
+                                    <div class="level-header">
+                                        <h4>Nivel 2: Pueblo</h4>
+                                        <span class="level-range">20-40 km</span>
+                                    </div>
+                                    <div class="level-description">
+                                        <p><strong>Especialización:</strong> Baja</p>
+                                        <p><strong>Ejemplo:</strong> Artesanos especializados por oficio</p>
+                                        <p><strong>Roles:</strong> 8-12 especializaciones</p>
+                                    </div>
+                                    <div class="level-indicators">
+                                        <div class="indicator" id="level2-indicator"></div>
+                                    </div>
+                                </div>
+
+                                <div class="level-card" data-level="3">
+                                    <div class="level-header">
+                                        <h4>Nivel 3: Ciudad</h4>
+                                        <span class="level-range">40-60 km</span>
+                                    </div>
+                                    <div class="level-description">
+                                        <p><strong>Especialización:</strong> Media</p>
+                                        <p><strong>Ejemplo:</strong> Fábricas con roles específicos</p>
+                                        <p><strong>Roles:</strong> 15-25 especializaciones</p>
+                                    </div>
+                                    <div class="level-indicators">
+                                        <div class="indicator" id="level3-indicator"></div>
+                                    </div>
+                                </div>
+
+                                <div class="level-card" data-level="4">
+                                    <div class="level-header">
+                                        <h4>Nivel 4: Metrópolis</h4>
+                                        <span class="level-range">60-80 km</span>
+                                    </div>
+                                    <div class="level-description">
+                                        <p><strong>Especialización:</strong> Alta</p>
+                                        <p><strong>Ejemplo:</strong> Industrias especializadas</p>
+                                        <p><strong>Roles:</strong> 30-50 especializaciones</p>
+                                    </div>
+                                    <div class="level-indicators">
+                                        <div class="indicator" id="level4-indicator"></div>
+                                    </div>
+                                </div>
+
+                                <div class="level-card" data-level="5">
+                                    <div class="level-header">
+                                        <h4>Nivel 5: Imperio</h4>
+                                        <span class="level-range">80+ km</span>
+                                    </div>
+                                    <div class="level-description">
+                                        <p><strong>Especialización:</strong> Máxima</p>
+                                        <p><strong>Ejemplo:</strong> Revolución Industrial</p>
+                                        <p><strong>Roles:</strong> 50+ especializaciones</p>
+                                    </div>
+                                    <div class="level-indicators">
+                                        <div class="indicator" id="level5-indicator"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Trabajadores -->
+                    <div id="workers" class="tab-pane">
+                        <div class="workers-analysis">
+                            <h3>Evolución de Trabajadores por Especialización</h3>
+                            <div class="workers-chart">
+                                <canvas id="workersChart"></canvas>
+                            </div>
+                            <div class="workers-stats">
+                                <div class="worker-stat">
+                                    <h4>Especializaciones Actuales</h4>
+                                    <div id="currentSpecializations" class="specialization-list"></div>
+                                </div>
+                                <div class="worker-stat">
+                                    <h4>Próximas Especializaciones</h4>
+                                    <div id="nextSpecializations" class="specialization-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Producción -->
+                    <div id="production" class="tab-pane">
+                        <div class="production-analysis">
+                            <h3>Análisis de Producción por Nivel</h3>
+                            <div class="production-metrics">
+                                <div class="metric-card">
+                                    <h4>Productividad</h4>
+                                    <div class="metric-value" id="productivityValue">100%</div>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" id="productivityBar"></div>
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>Eficiencia</h4>
+                                    <div class="metric-value" id="efficiencyValue">85%</div>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" id="efficiencyBar"></div>
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>Calidad</h4>
+                                    <div class="metric-value" id="qualityValue">90%</div>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" id="qualityBar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="production-timeline">
+                                <h4>Historial de Expansión</h4>
+                                <div id="expansionTimeline" class="timeline"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Comercio -->
+                    <div id="trade" class="tab-pane">
+                        <div class="trade-analysis">
+                            <h3>Análisis de Comercio y Mercado</h3>
+                            <div class="trade-metrics">
+                                <div class="trade-stat">
+                                    <i class="fas fa-route"></i>
+                                    <span id="tradeRoutes">0</span>
+                                    <label>Rutas Comerciales</label>
+                                </div>
+                                <div class="trade-stat">
+                                    <i class="fas fa-ship"></i>
+                                    <span id="tradeVolume">0</span>
+                                    <label>Volumen de Comercio</label>
+                                </div>
+                                <div class="trade-stat">
+                                    <i class="fas fa-globe"></i>
+                                    <span id="marketReach">0</span>
+                                    <label>Alcance del Mercado</label>
+                                </div>
+                            </div>
+                            <div class="trade-map">
+                                <h4>Mapa de Rutas Comerciales</h4>
+                                <div id="tradeMap" class="trade-visualization"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para explicación teórica -->
+    <div id="theoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Teoría de Adam Smith - Capítulo 3</h2>
+            <div class="theory-content">
+                <div class="theory-section">
+                    <h3>La Relación Mercado-Especialización</h3>
+                    <p>Adam Smith observó que la división del trabajo está directamente limitada por el tamaño del mercado disponible. Cuanto más grande sea el mercado, mayor será la especialización posible.</p>
+                </div>
+                <div class="theory-section">
+                    <h3>Ejemplos Históricos</h3>
+                    <ul>
+                        <li><strong>Aldea rural:</strong> Un herrero hace herramientas, clavos y reparaciones</li>
+                        <li><strong>Ciudad medieval:</strong> Herreros especializados en diferentes tipos de herramientas</li>
+                        <li><strong>Revolución Industrial:</strong> Fábricas con trabajadores especializados en tareas específicas</li>
+                    </ul>
+                </div>
+                <div class="theory-section">
+                    <h3>Factores de Expansión</h3>
+                    <ul>
+                        <li><strong>Infraestructura:</strong> Carreteras, puertos, mercados</li>
+                        <li><strong>Población:</strong> Más consumidores = mayor demanda</li>
+                        <li><strong>Comunicación:</strong> Información y comercio más eficiente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/js/expansion.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html> 

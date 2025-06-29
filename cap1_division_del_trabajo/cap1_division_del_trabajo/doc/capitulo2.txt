@@ -1,0 +1,38 @@
+Capítulo 2: "Del principio que da lugar a la división del trabajo"
+Conceptos Clave:
+Origen de la división del trabajo:
+
+No surge de sabiduría humana, sino de la propensión al trueque.
+
+Ejemplo: Un cazador intercambia pieles por flechas con un herrero.
+
+Ventaja comparativa (antes de David Ricardo):
+
+"Nunca vi a un perro intercambiar huesos con otro perro".
+
+Aplicación en tu App:
+Sistema de trueque inteligente:
+
+Crea un mercado P2P donde los usuarios intercambien bienes según sus especializaciones.
+
+Ejemplo en código:
+
+python
+class Usuario:
+    def __init__(self, rol, producto, cantidad):
+        self.rol = rol  # ej: 'agricultor', 'herrero'
+        self.producto = producto  # ej: 'trigo', 'herramientas'
+        self.cantidad = cantidad
+
+def intercambio(usuario_a, usuario_b):
+    # Calcula valor relativo basado en horas de trabajo (Smith)
+    valor_a = usuario_a.cantidad * 2  # Supongamos 2h/unidad
+    valor_b = usuario_b.cantidad * 1  # 1h/unidad
+    return f"Intercambio viable: {valor_a} horas vs {valor_b} horas" if valor_a == valor_b else "Negociación necesaria"
+
+agricultor = Usuario('agricultor', 'trigo', 10)  # 10 unidades = 20h
+herrero = Usuario('herrero', 'herramientas', 20) # 20 unidades = 20h
+print(intercambio(agricultor, herrero))  # Output: "Intercambio viable"
+
+
+_--------------------------------------------------------------------------------------------------------------

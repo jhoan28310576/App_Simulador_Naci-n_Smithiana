@@ -1,0 +1,264 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan Pérez",
+      "rol": "agricultor",
+      "especializacion": "trigo",
+      "productividad": 3.5,
+      "saldo": 1500,
+      "inventario": {
+        "trigo": 100,
+        "herramientas": 5,
+        "dinero": 1500
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "María Gómez",
+      "rol": "artesano",
+      "especializacion": "herramientas",
+      "productividad": 4.0,
+      "saldo": 1200,
+      "inventario": {
+        "trigo": 20,
+        "herramientas": 30,
+        "dinero": 1200
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos Ruiz",
+      "rol": "comerciante",
+      "especializacion": "transacciones",
+      "productividad": 2.5,
+      "saldo": 3000,
+      "inventario": {
+        "trigo": 50,
+        "herramientas": 15,
+        "dinero": 3000
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Ana López",
+      "rol": "agricultor",
+      "especializacion": "maíz",
+      "productividad": 3.0,
+      "saldo": 900,
+      "inventario": {
+        "trigo": 80,
+        "herramientas": 3,
+        "dinero": 900
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro Martínez",
+      "rol": "artesano",
+      "especializacion": "muebles",
+      "productividad": 3.8,
+      "saldo": 1800,
+      "inventario": {
+        "trigo": 10,
+        "herramientas": 25,
+        "dinero": 1800
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Luisa Fernández",
+      "rol": "comerciante",
+      "especializacion": "importaciones",
+      "productividad": 2.8,
+      "saldo": 2500,
+      "inventario": {
+        "trigo": 60,
+        "herramientas": 20,
+        "dinero": 2500
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Jorge Díaz",
+      "rol": "agricultor",
+      "especializacion": "verduras",
+      "productividad": 3.2,
+      "saldo": 1100,
+      "inventario": {
+        "trigo": 70,
+        "herramientas": 8,
+        "dinero": 1100
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Sofía Castro",
+      "rol": "artesano",
+      "especializacion": "telas",
+      "productividad": 4.2,
+      "saldo": 2000,
+      "inventario": {
+        "trigo": 15,
+        "herramientas": 40,
+        "dinero": 2000
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Miguel Ángel",
+      "rol": "comerciante",
+      "especializacion": "exportaciones",
+      "productividad": 3.0,
+      "saldo": 3500,
+      "inventario": {
+        "trigo": 45,
+        "herramientas": 10,
+        "dinero": 3500
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Elena Mora",
+      "rol": "agricultor",
+      "especializacion": "frutas",
+      "productividad": 3.7,
+      "saldo": 1300,
+      "inventario": {
+        "trigo": 90,
+        "herramientas": 6,
+        "dinero": 1300
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "Roberto Jiménez",
+      "rol": "agricultor",
+      "especializacion": null,
+      "productividad": 2.8,
+      "saldo": 800,
+      "inventario": {
+        "trigo": 40,
+        "herramientas": 2,
+        "dinero": 800
+      }
+    },
+    {
+      "id": 12,
+      "nombre": "Laura Torres",
+      "rol": "artesano",
+      "especializacion": null,
+      "productividad": 3.5,
+      "saldo": 1400,
+      "inventario": {
+        "trigo": 25,
+        "herramientas": 18,
+        "dinero": 1400
+      }
+    },
+    {
+      "id": 13,
+      "nombre": "Fernando Castro",
+      "rol": "comerciante",
+      "especializacion": null,
+      "productividad": 2.0,
+      "saldo": 2200,
+      "inventario": {
+        "trigo": 35,
+        "herramientas": 12,
+        "dinero": 2200
+      }
+    },
+    {
+      "id": 14,
+      "nombre": "Isabel Ramírez",
+      "rol": "agricultor",
+      "especializacion": "hortalizas",
+      "productividad": 3.9,
+      "saldo": 1700,
+      "inventario": {
+        "trigo": 110,
+        "herramientas": 7,
+        "dinero": 1700
+      }
+    },
+    {
+      "id": 15,
+      "nombre": "David Mendoza",
+      "rol": "artesano",
+      "especializacion": "cerámica",
+      "productividad": 4.1,
+      "saldo": 2100,
+      "inventario": {
+        "trigo": 18,
+        "herramientas": 35,
+        "dinero": 2100
+      }
+    },
+    {
+      "id": 16,
+      "nombre": "Patricia Núñez",
+      "rol": "comerciante",
+      "especializacion": null,
+      "productividad": 2.3,
+      "saldo": 1900,
+      "inventario": {
+        "trigo": 55,
+        "herramientas": 14,
+        "dinero": 1900
+      }
+    },
+    {
+      "id": 17,
+      "nombre": "Ricardo Vargas",
+      "rol": "agricultor",
+      "especializacion": null,
+      "productividad": 2.9,
+      "saldo": 950,
+      "inventario": {
+        "trigo": 65,
+        "herramientas": 4,
+        "dinero": 950
+      }
+    },
+    {
+      "id": 18,
+      "nombre": "Carmen Soto",
+      "rol": "artesano",
+      "especializacion": "joyería",
+      "productividad": 4.3,
+      "saldo": 2300,
+      "inventario": {
+        "trigo": 12,
+        "herramientas": 28,
+        "dinero": 2300
+      }
+    },
+    {
+      "id": 19,
+      "nombre": "Oscar Herrera",
+      "rol": "comerciante",
+      "especializacion": "distribución",
+      "productividad": 3.2,
+      "saldo": 2800,
+      "inventario": {
+        "trigo": 48,
+        "herramientas": 16,
+        "dinero": 2800
+      }
+    },
+    {
+      "id": 20,
+      "nombre": "Teresa Ríos",
+      "rol": "agricultor",
+      "especializacion": null,
+      "productividad": 3.1,
+      "saldo": 1050,
+      "inventario": {
+        "trigo": 75,
+        "herramientas": 5,
+        "dinero": 1050
+      }
+    }
+  ]
+}
