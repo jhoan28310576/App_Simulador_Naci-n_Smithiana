@@ -1,6 +1,6 @@
 Vamos a analizar Libro I, Capítulos 1-3 de La Riqueza de las Naciones con un enfoque práctico para la app. 
 
-importate leer informe [Informe division del trabajo CAP 1,2,3 adam smith.pdf](https://github.com/user-attachments/files/20970466/Informe.division.del.trabajo.CAP.1.2.3.adam.smith.pdf)
+importante leer informe [Informe division del trabajo CAP 1,2,3 adam smith.pdf](https://github.com/user-attachments/files/20970466/Informe.division.del.trabajo.CAP.1.2.3.adam.smith.pdf)
 
 
 Capítulo 1: "De la división del trabajo"
