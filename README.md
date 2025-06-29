@@ -27,6 +27,8 @@ Cada especialización multiplica su productividad en ciertas tareas.
 
 
 cap1
+
+
 https://github.com/user-attachments/assets/bcf85174-f3ca-4aa9-91d6-69eda9c9f572
 
 
@@ -117,6 +119,8 @@ El sistema está ahora completamente funcional y ejecutándose en http://localho
 
 
 cap2
+
+
 https://github.com/user-attachments/assets/25289fc8-c707-4c7b-a032-9c41e4bd01a2
 
 
