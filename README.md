@@ -26,7 +26,7 @@ Los usuarios eligen "especializarse" en roles (agricultor, artesano, comerciante
 Cada especialización multiplica su productividad en ciertas tareas.
 
 
-
+cap1
 https://github.com/user-attachments/assets/bcf85174-f3ca-4aa9-91d6-69eda9c9f572
 
 
@@ -116,7 +116,7 @@ Calcular Valores: Usa la calculadora para entender equivalencias
 El sistema está ahora completamente funcional y ejecutándose en http://localhost:8080. ¡Puede acceder a la página de trueque y experimentar con el mercado P2P basado en las teorías de Adam Smith!
 
 
-
+cap2
 https://github.com/user-attachments/assets/25289fc8-c707-4c7b-a032-9c41e4bd01a2
 
 
