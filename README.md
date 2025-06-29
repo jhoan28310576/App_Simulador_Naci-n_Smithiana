@@ -1,5 +1,7 @@
 Vamos a analizar Libro I, Capítulos 1-3 de La Riqueza de las Naciones con un enfoque práctico para la app. 
 
+este es el comienzo de la traduccionesen digital  de los libros de economia mas destacados como adam smith, karl marx el capital entre otros grandes economistas...
+
 importante leer informe [Informe division del trabajo CAP 1,2,3 adam smith.pdf](https://github.com/user-attachments/files/20970466/Informe.division.del.trabajo.CAP.1.2.3.adam.smith.pdf)
 
 
