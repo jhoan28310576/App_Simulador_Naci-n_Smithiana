@@ -1,5 +1,8 @@
 Vamos a analizar Libro I, Capítulos 1-3 de La Riqueza de las Naciones con un enfoque práctico para la app. 
 
+importate leer informe [Informe division del trabajo CAP 1,2,3 adam smith.pdf](https://github.com/user-attachments/files/20970466/Informe.division.del.trabajo.CAP.1.2.3.adam.smith.pdf)
+
+
 Capítulo 1: "De la división del trabajo"
 Conceptos Clave:
 Ejemplo de la fábrica de alfileres:
@@ -139,6 +142,60 @@ Los usuarios empiezan en una aldea (mercado pequeño) y pueden:
 Construir caminos/mercados para aumentar su radio comercial.
 
 Especializarse más al llegar a ciudades virtuales.
+
+
+
+
+https://github.com/user-attachments/assets/88d0611a-0d2c-4576-9d71-be916659e322
+
+
+/ Estado del mercado
+market = {
+ radius: 10, // Radio en km
+ population: 50, // Población
+ specializationLevel: 1, // Nivel 1-5
+ marketValue: 1000, // Valor económico
+ infrastructure: { // Infraestructura
+ roads: 0,
+ ports: 0,
+ markets: 0,
+ warehouses: 0
+ }
+}
+
+Simulador Visual
+● Mapa circular que muestra el radio del mercado
+● Anillos concéntricos que se activan según el nivel
+● Marcadores dinámicos para infraestructura
+● Animaciones que muestran la expansión
+B. Controles de Infraestructura
+// Ejemplo de uso
+slider.value = 3; // 3 carreteras
+200
+// Resultado: +15km al radio del mercado
+
+3. Producción
+● Métricas en tiempo real:
+● Productividad: 60% + (nivel × 10%)
+● Eficiencia: 50% + (carreteras × 5%)
+● Calidad: 70% + (almacenes × 5%)
+● Historial de expansiones
+4. Comercio
+● Rutas comerciales = carreteras + puertos
+● Volumen de comercio = valor del mercado / 100
+201
+● Alcance del mercado = radio actual
+🔧 Lógica de Cálculo
+Fórmulas Implementadas:
+// Radio del mercado
+newRadius = 10 + (roads × 5) + (ports × 8) + (markets × 3) + (warehouses × 2)
+// Población
+population = 50 + (radius - 10) × 10
+// Nivel de especialización
+specializationLevel = Math.floor(radius / 20)
+// Valor del mercado
+marketValue = 1000 + (radius - 10) × 100 + population × 5
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 Visualización de Conceptos (Para tu App):
