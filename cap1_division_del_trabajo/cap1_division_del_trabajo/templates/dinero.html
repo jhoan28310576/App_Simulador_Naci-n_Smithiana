@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador del Dinero - Capítulo 4</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/dinero.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="/assets/logo/Logo64x64.png" alt="logo" />
+        <h1>LOGO</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="/expansion">Cap Anterior</a>
+        </li>
+        <li>
+          <a href="/dinero">Cap 4: El origen y uso del dinero</a>
+        </li>
+        <li>
+          <a href="/">Cap 5:</a>
+        </li>
+        <li>
+          <a href="/">Cap 6:</a>
+        </li>
+        <li>
+          <a href="/dinero">Siguientes Cap</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="#">Cap 1 fábrica de alfileres</a>
+        </li>
+        <li>
+          <a href="/trueque">Cap 2 Sistema de trueque inteligente</a>
+        </li>
+        <li>
+          <a href="/expansion">Cap 3 Módulo de expansión de mercado</a>
+        </li>
+        <li>
+          <a href="/dinero">Siguientes Cap</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container dinero-container">
+      <!-- Bloque 1: Teoría -->
+      <section class="dinero-bloque teoria">
+        <h2><i class="fas fa-coins"></i> Capítulo 4: Del origen y uso del dinero</h2>
+        <div class="teoria-content">
+          <div class="teoria-col">
+            <h3>Problemas del trueque</h3>
+            <ul>
+              <li>
+                <b>Doble coincidencia de necesidades:</b> Para intercambiar, ambas partes deben querer lo que el otro ofrece.
+              </li>
+              <li>
+                <b>Dificultad para dividir bienes:</b> Ejemplo: una vaca por herramientas.
+              </li>
+            </ul>
+          </div>
+          <div class="teoria-col">
+            <h3>Surgimiento del dinero</h3>
+            <ul>
+              <li>Metales preciosos (oro, plata) como medio de intercambio universal.</li>
+              <li>Acuñación de monedas para garantizar peso y pureza.</li>
+            </ul>
+          </div>
+          <div class="teoria-col">
+            <h3>Funciones del dinero</h3>
+            <ul>
+              <li>Medio de intercambio</li>
+              <li>Depósito de valor</li>
+              <li>Unidad de cuenta</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bloque 2: Conversión de monedas -->
+      <section class="dinero-bloque conversion">
+        <h2><i class="fas fa-exchange-alt"></i> Conversión de monedas</h2>
+        <form id="conversionForm" class="conversion-form">
+          <input type="number" id="cantidadInput" min="0" step="any" placeholder="Cantidad" required />
+          <select id="origenSelect">
+            <option value="oro">Oro</option>
+            <option value="plata">Plata</option>
+            <option value="cobre">Cobre</option>
+          </select>
+          <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+          <select id="destinoSelect">
+            <option value="oro">Oro</option>
+            <option value="plata">Plata</option>
+            <option value="cobre">Cobre</option>
+          </select>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Convertir</button>
+        </form>
+        <div id="conversionResultado" class="conversion-resultado"></div>
+      </section>
+
+      <!-- Bloque 3: Valores actuales de monedas -->
+      <section class="dinero-bloque valores">
+        <h2><i class="fas fa-balance-scale"></i> Valores actuales de las monedas</h2>
+        <table class="tabla-monedas">
+          <thead>
+            <tr>
+              <th>Moneda</th>
+              <th>Valor relativo al oro</th>
+            </tr>
+          </thead>
+          <tbody id="tablaValoresMonedas">
+            <!-- Se llena dinámicamente -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Bloque 4: Historial de valores de monedas -->
+      <section class="dinero-bloque historial">
+        <h2><i class="fas fa-chart-line"></i> Historial de valores de las monedas</h2>
+        <div class="historial-graficas">
+          <div class="grafica-moneda">
+            <h4>Oro</h4>
+            <canvas id="graficaOro"></canvas>
+          </div>
+          <div class="grafica-moneda">
+            <h4>Plata</h4>
+            <canvas id="graficaPlata"></canvas>
+          </div>
+          <div class="grafica-moneda">
+            <h4>Cobre</h4>
+            <canvas id="graficaCobre"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bloque 5: Usuarios y sus saldos -->
+      <section class="dinero-bloque usuarios">
+        <h2><i class="fas fa-users"></i> Usuarios y sus saldos en monedas</h2>
+        <table class="tabla-usuarios">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Oro</th>
+              <th>Plata</th>
+              <th>Cobre</th>
+              <th>Dinero</th>
+            </tr>
+          </thead>
+          <tbody id="tablaUsuariosMonedas">
+            <!-- Se llena dinámicamente -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/js/dinero.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

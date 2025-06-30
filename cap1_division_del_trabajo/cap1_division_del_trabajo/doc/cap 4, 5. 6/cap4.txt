@@ -1,0 +1,56 @@
+
+
+Capítulo 4: Del origen y uso del dinero
+Conceptos Clave:
+Problemas del trueque:
+
+"Doble coincidencia de necesidades": Para intercambiar, ambas partes deben querer lo que el otro ofrece.
+
+Dificultad para dividir ciertos bienes (ej: una vaca por herramientas).
+
+Surgimiento del dinero:
+
+Metales preciosos (oro, plata) se convirtieron en medio de intercambio universal.
+
+Acuñación de monedas para garantizar peso y pureza.
+
+Funciones del dinero:
+
+Medio de intercambio
+
+Depósito de valor
+
+Unidad de cuenta
+
+// Moneda virtual basada en metales preciosos
+class Moneda {
+  constructor(nombre, valorRelativoOro) {
+    this.nombre = nombre;
+    this.valor = valorRelativoOro;
+    this.historialValores = [];
+  }
+
+  actualizarValor(nuevoValor) {
+    this.historialValores.push(this.valor);
+    this.valor = nuevoValor;
+  }
+}
+
+const monedas = {
+  "oro": new Moneda("Onza de Oro", 1),
+  "plata": new Moneda("Onza de Plata", 0.05),
+  "cobre": new Moneda("Libra de Cobre", 0.001)
+};
+
+// Función de conversión
+function convertirMoneda(cantidad, monedaOrigen, monedaDestino) {
+  return cantidad * monedas[monedaOrigen].valor / monedas[monedaDestino].valor;
+}
+
+Implementa en tu app:
+
+Usuarios pueden elegir en qué moneda mantener sus ahorros
+
+Sistema de conversión automática entre metales
+
+Historial de valores de las monedas

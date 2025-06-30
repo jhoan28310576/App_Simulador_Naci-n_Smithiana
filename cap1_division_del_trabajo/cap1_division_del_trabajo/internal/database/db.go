@@ -21,6 +21,9 @@ type User struct {
 		Trigo        int     `json:"trigo"`
 		Herramientas int     `json:"herramientas"`
 		Dinero       float64 `json:"dinero"`
+		Oro          float64 `json:"oro"`   // 1 onza de oro = 1 hora de trabajo
+		Plata        float64 `json:"plata"` // 1 onza de plata = 0.05 horas de trabajo
+		Cobre        float64 `json:"cobre"` // 1 libra de cobre = 0.001 horas de trabajo
 	} `json:"inventario"`
 }
 
@@ -64,6 +67,38 @@ type OfertaTrueque struct {
 	ValorOfrece    float64 `json:"valor_ofrece"`
 	ValorBusca     float64 `json:"valor_busca"`
 	Activa         bool    `json:"activa"`
+}
+
+// Estructura para monedas y su historial
+type Moneda struct {
+	Nombre           string    `json:"nombre"`
+	ValorRelativoOro float64   `json:"valor_relativo_oro"`
+	HistorialValores []float64 `json:"historial_valores"`
+}
+
+// Mapa global de monedas
+var Monedas = map[string]*Moneda{
+	"oro":   {Nombre: "Onza de Oro", ValorRelativoOro: 1, HistorialValores: []float64{1}},
+	"plata": {Nombre: "Onza de Plata", ValorRelativoOro: 0.05, HistorialValores: []float64{0.05}},
+	"cobre": {Nombre: "Libra de Cobre", ValorRelativoOro: 0.001, HistorialValores: []float64{0.001}},
+}
+
+// Función para actualizar el valor de una moneda y guardar historial
+func ActualizarValorMoneda(nombre string, nuevoValor float64) {
+	if moneda, ok := Monedas[nombre]; ok {
+		moneda.HistorialValores = append(moneda.HistorialValores, moneda.ValorRelativoOro)
+		moneda.ValorRelativoOro = nuevoValor
+	}
+}
+
+// Función de conversión entre monedas
+func ConvertirMoneda(cantidad float64, monedaOrigen, monedaDestino string) float64 {
+	m1, ok1 := Monedas[monedaOrigen]
+	m2, ok2 := Monedas[monedaDestino]
+	if !ok1 || !ok2 || m2.ValorRelativoOro == 0 {
+		return 0
+	}
+	return cantidad * m1.ValorRelativoOro / m2.ValorRelativoOro
 }
 
 // Constantes para el cálculo de valores

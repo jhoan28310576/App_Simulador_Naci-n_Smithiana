@@ -41,6 +41,13 @@ func main() {
 		})
 	})
 
+	// Ruta para la página de dinero
+	router.GET("/dinero", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "dinero.html", gin.H{
+			"title": "Simulador del Dinero - Capítulo 4",
+		})
+	})
+
 	// Endpoint para obtener todos los usuarios
 	router.GET("/api/users", func(c *gin.Context) {
 		users := database.GetAllUsers()
@@ -276,6 +283,63 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{
 			"success":      true,
 			"estadisticas": estadisticas,
+		})
+	})
+
+	// ===== ENDPOINTS DEL SISTEMA DE MONEDAS (CAPÍTULO 4) =====
+
+	// Endpoint para consultar los valores actuales de las monedas
+	router.GET("/api/monedas/valores", func(c *gin.Context) {
+		valores := make(map[string]gin.H)
+		for k, v := range database.Monedas {
+			valores[k] = gin.H{
+				"nombre":             v.Nombre,
+				"valor_relativo_oro": v.ValorRelativoOro,
+			}
+		}
+		c.JSON(http.StatusOK, gin.H{
+			"success": true,
+			"valores": valores,
+		})
+	})
+
+	// Endpoint para consultar el historial de valores de una moneda
+	router.GET("/api/monedas/historial/:moneda", func(c *gin.Context) {
+		moneda := c.Param("moneda")
+		m, ok := database.Monedas[moneda]
+		if !ok {
+			c.JSON(http.StatusNotFound, gin.H{
+				"success": false,
+				"error":   "Moneda no encontrada",
+			})
+			return
+		}
+		c.JSON(http.StatusOK, gin.H{
+			"success":   true,
+			"historial": m.HistorialValores,
+		})
+	})
+
+	// Endpoint para convertir entre monedas
+	router.GET("/api/monedas/convertir/:cantidad/:origen/:destino", func(c *gin.Context) {
+		cantidadStr := c.Param("cantidad")
+		origen := c.Param("origen")
+		destino := c.Param("destino")
+		cantidad, err := strconv.ParseFloat(cantidadStr, 64)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"success": false,
+				"error":   "Cantidad inválida",
+			})
+			return
+		}
+		resultado := database.ConvertirMoneda(cantidad, origen, destino)
+		c.JSON(http.StatusOK, gin.H{
+			"success":         true,
+			"cantidad_origen": cantidad,
+			"moneda_origen":   origen,
+			"moneda_destino":  destino,
+			"resultado":       resultado,
 		})
 	})
 
