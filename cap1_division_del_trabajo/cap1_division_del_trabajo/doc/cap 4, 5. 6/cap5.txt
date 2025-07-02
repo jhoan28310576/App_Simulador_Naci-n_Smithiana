@@ -1,0 +1,37 @@
+Capítulo 5: Del precio real y nominal de las mercancías
+Conceptos Clave:
+Teoría del valor-trabajo:
+
+Valor real = Cantidad de trabajo requerido para producir un bien
+
+Valor nominal = Cantidad de dinero que representa
+
+Distorsiones monetarias:
+
+La inflación afecta el valor nominal pero no el real
+
+Ejemplo histórico: Plata americana redujo el valor nominal en Europa
+
+Aplicación en tu App:
+Sistema de precios dual:
+
+el codig debe ser en goland 
+class Producto:
+    def __init__(self, nombre, horas_trabajo):
+        self.nombre = nombre
+        self.horas_trabajo = horas_trabajo  # Valor real
+        self.precio_moneda = 0  # Valor nominal
+    
+    def actualizar_precio(self, valor_moneda):
+        # Convierte valor real a nominal
+        self.precio_moneda = self.horas_trabajo * valor_moneda
+
+# Ejemplo:
+trigo = Producto("Trigo", 2)  # 2 horas de trabajo por unidad
+trigo.actualizar_precio(monedas["oro"].valor)  # 2 * 1 = 2 onzas de oro
+Dashboard de inflación:
+
+Muestra cómo cambia el poder adquisitivo de las monedas
+
+Compara precios reales vs. nominales históricos
+

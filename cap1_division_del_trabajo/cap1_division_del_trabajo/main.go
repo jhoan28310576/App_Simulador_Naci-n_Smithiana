@@ -5,6 +5,7 @@ import (
 	"strconv"
 
 	"cap1_division_del_trabajo/internal/database"
+	"cap1_division_del_trabajo/internal/models"
 
 	"github.com/gin-gonic/gin"
 )
@@ -45,6 +46,13 @@ func main() {
 	router.GET("/dinero", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "dinero.html", gin.H{
 			"title": "Simulador del Dinero - Capítulo 4",
+		})
+	})
+
+	// Ruta para la página de precios reales vs nominales
+	router.GET("/precios", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "precios.html", gin.H{
+			"title": "Precios Reales vs Nominales - Capítulo 5",
 		})
 	})
 
@@ -340,6 +348,123 @@ func main() {
 			"moneda_origen":   origen,
 			"moneda_destino":  destino,
 			"resultado":       resultado,
+		})
+	})
+
+	// ===== ENDPOINTS DEL SISTEMA DE PRECIOS DUAL (CAPÍTULO 5) =====
+
+	// Endpoint para obtener todos los productos con precios reales y nominales
+	router.GET("/api/precios/productos", func(c *gin.Context) {
+		productos := models.CompararPreciosRealVsNominal()
+		c.JSON(http.StatusOK, gin.H{
+			"success":   true,
+			"productos": productos,
+		})
+	})
+
+	// Endpoint para obtener datos de inflación del World Bank
+	router.GET("/api/precios/inflacion", func(c *gin.Context) {
+		estadisticas := models.ObtenerEstadisticasInflacion()
+		c.JSON(http.StatusOK, gin.H{
+			"success":      true,
+			"estadisticas": estadisticas,
+		})
+	})
+
+	// Endpoint para actualizar precios nominales basado en inflación
+	router.GET("/api/precios/actualizar/:pais", func(c *gin.Context) {
+		pais := c.Param("pais")
+
+		// Obtener datos de inflación
+		datosInflacion, err := models.ObtenerDatosInflacionWorldBank(pais, "FP.CPI.TOTL")
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"success": false,
+				"error":   "Error al obtener datos de inflación: " + err.Error(),
+			})
+			return
+		}
+
+		// Calcular factor de inflación
+		factorInflacion, err := models.CalcularFactorInflacion(datosInflacion, "2010")
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"success": false,
+				"error":   "Error al calcular factor de inflación: " + err.Error(),
+			})
+			return
+		}
+
+		// Actualizar precios de todos los productos
+		for _, producto := range models.Productos {
+			producto.ActualizarPrecioNominal(factorInflacion)
+		}
+
+		c.JSON(http.StatusOK, gin.H{
+			"success":                true,
+			"pais":                   pais,
+			"factor_inflacion":       factorInflacion,
+			"productos_actualizados": len(models.Productos),
+		})
+	})
+
+	// Endpoint para calcular poder adquisitivo
+	router.GET("/api/precios/poder-adquisitivo/:producto/:cantidad", func(c *gin.Context) {
+		productoID := c.Param("producto")
+		cantidadStr := c.Param("cantidad")
+
+		cantidad, err := strconv.ParseFloat(cantidadStr, 64)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"success": false,
+				"error":   "Cantidad inválida",
+			})
+			return
+		}
+
+		producto, existe := models.Productos[productoID]
+		if !existe {
+			c.JSON(http.StatusNotFound, gin.H{
+				"success": false,
+				"error":   "Producto no encontrado",
+			})
+			return
+		}
+
+		poderAdquisitivo := producto.CalcularPoderAdquisitivo(cantidad)
+
+		c.JSON(http.StatusOK, gin.H{
+			"success":           true,
+			"producto":          producto.Nombre,
+			"cantidad_dinero":   cantidad,
+			"moneda":            producto.Moneda,
+			"poder_adquisitivo": poderAdquisitivo,
+			"unidades":          poderAdquisitivo,
+		})
+	})
+
+	// Endpoint para obtener historial de precios de un producto
+	router.GET("/api/precios/historial/:producto", func(c *gin.Context) {
+		productoID := c.Param("producto")
+
+		producto, existe := models.Productos[productoID]
+		if !existe {
+			c.JSON(http.StatusNotFound, gin.H{
+				"success": false,
+				"error":   "Producto no encontrado",
+			})
+			return
+		}
+
+		historial := producto.HistorialPrecios
+		if historial == nil {
+			historial = []models.PrecioHistorico{}
+		}
+
+		c.JSON(http.StatusOK, gin.H{
+			"success":   true,
+			"producto":  producto.Nombre,
+			"historial": historial,
 		})
 	})
 

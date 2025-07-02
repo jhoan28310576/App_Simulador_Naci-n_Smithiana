@@ -1,0 +1,51 @@
+Capítulo 6: De los componentes del precio de las mercancías
+Conceptos Clave:
+Estructura del precio:
+
+Salarios (remuneración del trabajo)
+
+Beneficios (remuneración del capital)
+
+Rentas (remuneración de la tierra)
+
+Precio natural vs. precio de mercado:
+
+Precio natural = Costo de producción (salarios + beneficios + rentas)
+
+Precio de mercado = Determinado por oferta y demanda
+
+Aplicación en tu App:
+Desglose de precios:
+
+json
+"productos": [
+  {
+    "nombre": "Pan",
+    "precio_mercado": 10,
+    "componentes": {
+      "salarios": 4,    // 40%
+      "beneficios": 3,  // 30%
+      "rentas": 3       // 30%
+    },
+    "historial_precios": {
+      "natural": [8, 8.5, 9],
+      "mercado": [9, 9.5, 10]
+    }
+  }
+]
+Simulador de mercado:
+
+javascript
+class Mercado {
+  constructor(producto) {
+    this.producto = producto;
+    this.oferta = 100;
+    this.demanda = 100;
+  }
+
+  actualizarPrecio() {
+    const desequilibrio = this.demanda / this.oferta;
+    this.producto.precio_mercado = this.producto.precio_natural * desequilibrio;
+    return this.producto.precio_mercado;
+  }
+}
