@@ -152,7 +152,7 @@ Especializarse más al llegar a ciudades virtuales.
 
 
 
-
+cap3
 https://github.com/user-attachments/assets/88d0611a-0d2c-4576-9d71-be916659e322
 
 
@@ -202,29 +202,102 @@ population = 50 + (radius - 10) × 10
 specializationLevel = Math.floor(radius / 20)
 // Valor del mercado
 marketValue = 1000 + (radius - 10) × 100 + population × 5
-
 --------------------------------------------------------------------------------------------------------------------------------
 
-Visualización de Conceptos (Para tu App):
-Diagrama de flujo de la división del trabajo:
+# Simulador Educativo - Capítulo 4: El Origen y Uso del Dinero
 
-[Usuario elige rol] → [Produce bienes especializados] → [Mercado] → [Intercambia por otros bienes]
-Dashboard interactivo:
+Este módulo forma parte de una aplicación educativa basada en "La Riqueza de las Naciones" de Adam Smith. El Capítulo 4 explora cómo surge el dinero para resolver los problemas del trueque y permite experimentar con monedas virtuales basadas en metales preciosos.
 
-Muestra en tiempo real:
+## Conceptos clave
+- **Problemas del trueque:** Doble coincidencia de necesidades, dificultad para dividir bienes.
+- **Surgimiento del dinero:** Uso de metales preciosos (oro, plata, cobre) como medio de intercambio universal y acuñación de monedas.
+- **Funciones del dinero:** Medio de intercambio, depósito de valor, unidad de cuenta.
 
-Nivel de especialización promedio de los usuarios
+## Funcionalidades principales
+- Simulación del sistema de trueque y su evolución hacia el uso del dinero.
+- Visualización y conversión entre monedas virtuales: oro, plata y cobre.
+- Historial de valores de cada moneda y su relación con el oro.
+- Interfaz interactiva para experimentar con conversiones y valores históricos.
+- Visualización de usuarios y sus saldos en diferentes monedas.
 
-Tamaño del mercado virtual
+## Tecnologías utilizadas
+- Backend: Go (Golang) + Gin
+- Frontend: HTML, CSS, JavaScript, Bootstrap, Chart.js
 
-Productividad por sector
+## ¿Cómo ejecutar?
+1. Clona el repositorio y entra al directorio del capítulo 4:
+   ```bash
+   git clone <repo-url>
+   cd cap1_division_del_trabajo/cap1_division_del_trabajo
+   ```
+2. Instala Go y ejecuta el servidor:
+   ```bash
+   go run main.go
+   ```
+3. Abre tu navegador en [http://localhost:8080/dinero](http://localhost:8080/dinero)
+
+## Estructura de carpetas relevante
+- `main.go` - Servidor principal y endpoints
+- `internal/models/` - Lógica de monedas y conversiones
+- `templates/dinero.html` - Interfaz del capítulo 4
+- `assets/js/dinero.js` - Lógica frontend de monedas
+- `assets/css/dinero.css` - Estilos personalizados
+- `doc/cap 4, 5. 6/cap4.txt` - Resumen teórico y guía de implementación
+
+## Créditos
+Desarrollado como recurso educativo para comprender el origen y la función del dinero en la economía clásica. 
+
+muestra
+
+
+https://github.com/user-attachments/assets/bc8a9b2c-e450-43fa-a254-d6d2f708b9df
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+# Simulador Educativo - Capítulo 5: Precios Reales vs Nominales
+
+Este módulo forma parte de una aplicación educativa interactiva basada en "La Riqueza de las Naciones" de Adam Smith. El Capítulo 5 explora la diferencia entre el valor real (horas de trabajo) y el valor nominal (dinero) de los productos, mostrando el impacto de la inflación con datos reales.
+
+## Funcionalidades principales
+- **Comparación de precios reales y nominales** de productos básicos.
+- **Visualización de la inflación** histórica de Venezuela y Colombia usando datos del World Bank.
+- **Simulación del efecto de la inflación** sobre el poder adquisitivo y los precios nominales.
+- **Historial de precios** para cada producto, con registro de cada actualización.
+- **Calculadora interactiva** de poder adquisitivo.
+
+## Tecnologías utilizadas
+- Backend: Go (Golang) + Gin
+- Frontend: HTML, CSS, JavaScript, Bootstrap, Chart.js
+- API de datos: World Bank (Data360)
+
+## ¿Cómo ejecutar?
+1. Clona el repositorio y entra al directorio del capítulo 5:
+   ```bash
+   git clone <repo-url>
+   cd cap1_division_del_trabajo/cap1_division_del_trabajo
+   ```
+2. Instala Go y ejecuta el servidor:
+   ```bash
+   go run main.go
+   ```
+3. Abre tu navegador en [http://localhost:8080/precios](http://localhost:8080/precios)
+
+## Estructura de carpetas relevante
+- `main.go` - Servidor principal y endpoints
+- `internal/models/precios_dual.go` - Lógica de productos y precios
+- `templates/precios.html` - Interfaz del capítulo 5
+- `assets/js/precios.js` - Lógica frontend de precios e inflación
+- `assets/css/precios.css` - Estilos personalizados
+
+## Créditos
+Desarrollado como recurso educativo para comprender economía clásica y el impacto de la inflación en la vida real. 
+
+muestra
+
+https://github.com/user-attachments/assets/d31de5d2-2652-4381-92c1-f563f9b665ff
+
+
 
 -------------------------------------------------------------------------------------------------------------------------------
-Tarea Práctica para esta Semana:
-Implementa en el app:
-
-Un sistema donde los usuarios elijan entre 3 roles básicos (ej: agricultor, artesano, comerciante).
-
-Cada rol tiene un multiplicador de productividad para ciertos bienes (x3 si está especializado).
-
-Un mercado simple donde puedan intercambiar bienes 1:1 inicialmente.
+cap 6 en desarrollo 
