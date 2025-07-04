@@ -2,7 +2,7 @@ Vamos a analizar Libro I, Capítulos 1-3 de La Riqueza de las Naciones con un en
 
 este es el comienzo de la traduccionesen digital  de los libros de economia mas destacados como adam smith, karl marx el capital entre otros grandes economistas...
 
-importante leer informe [Informe las riquezas de las naciones adam smith CAP 1,2,3 .pdf](https://github.com/user-attachments/files/20985888/Informe.las.riquezas.de.las.naciones.adam.smith.CAP.1.2.3.pdf)
+importante leer Informe las riquezas de las naciones adam smith CAP 1,2,3  [Informe las riquezas de las naciones adam smith CAP 1,2,3 .pdf](https://github.com/user-attachments/files/20985888/Informe.las.riquezas.de.las.naciones.adam.smith.CAP.1.2.3.pdf)
 
 Informe las riquezas de las naciones adam smith   cap  4, 5, 6 [Informe las riquezas de las naciones adam smith   cap  4, 5, 6.pdf](https://github.com/user-attachments/files/21048774/Informe.las.riquezas.de.las.naciones.adam.smith.cap.4.5.6.pdf)
 
