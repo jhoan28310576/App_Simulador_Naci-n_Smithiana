@@ -1,0 +1,111 @@
+/* Estilos específicos para el Capítulo 6 */
+
+/* Nav blanco */
+nav, .navbar-white {
+    background-color: white !important;
+    color: #333 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav .logo h1 {
+    color: #333 !important;
+}
+
+nav ul li a {
+    color: #333 !important;
+}
+
+nav ul li a:hover {
+    color: #007bff !important;
+}
+
+.hamburger .line {
+    background-color: #333 !important;
+}
+
+.menubar {
+    background-color: white !important;
+    color: #333 !important;
+}
+
+.menubar ul li a {
+    color: #333 !important;
+}
+
+.menubar ul li a:hover {
+    color: #007bff !important;
+}
+
+/* Estilos adicionales para el simulador */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table {
+    color: white;
+}
+
+.table th, .table td {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+.componente-precio {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar {
+    font-weight: bold;
+}
+
+.historial-chart {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+    
+    nav ul {
+        background-color: white !important;
+    }
+    
+    nav ul li a {
+        color: #333 !important;
+    }
+}

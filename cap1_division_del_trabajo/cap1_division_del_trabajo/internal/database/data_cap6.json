@@ -1,0 +1,263 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan Pérez",
+      "rol": "agricultor",
+      "especializacion": "trigo",
+      "productividad": 3.5,
+      "saldo": 1500,
+      "inventario": {
+        "trigo": 100,
+        "herramientas": 5,
+        "dinero": 1500
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "María Gómez",
+      "rol": "artesano",
+      "especializacion": "herramientas",
+      "productividad": 4.0,
+      "saldo": 1200,
+      "inventario": {
+        "trigo": 20,
+        "herramientas": 30,
+        "dinero": 1200
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos Ruiz",
+      "rol": "comerciante",
+      "especializacion": "transacciones",
+      "productividad": 2.5,
+      "saldo": 3000,
+      "inventario": {
+        "trigo": 50,
+        "herramientas": 15,
+        "dinero": 3000
+      }
+    }
+  ],
+  "productos": [
+    {
+      "id": "trigo",
+      "nombre": "Trigo",
+      "categoria": "agricultura",
+      "precio_mercado": 250.00,
+      "precio_natural": 220.00,
+      "componentes": {
+        "salarios": 112.50,
+        "beneficios": 75.00,
+        "rentas": 62.50
+      },
+      "historial_precios": {
+        "natural": [200.00, 210.00, 215.00, 218.00, 220.00],
+        "mercado": [210.00, 225.00, 235.00, 245.00, 250.00]
+      },
+      "oferta": 1000,
+      "demanda": 1200,
+      "pais": "VE",
+      "unidad": "tonelada"
+    },
+    {
+      "id": "maiz",
+      "nombre": "Maíz",
+      "categoria": "agricultura",
+      "precio_mercado": 180.00,
+      "precio_natural": 160.00,
+      "componentes": {
+        "salarios": 81.00,
+        "beneficios": 54.00,
+        "rentas": 45.00
+      },
+      "historial_precios": {
+        "natural": [150.00, 155.00, 158.00, 159.00, 160.00],
+        "mercado": [160.00, 165.00, 170.00, 175.00, 180.00]
+      },
+      "oferta": 800,
+      "demanda": 900,
+      "pais": "VE",
+      "unidad": "tonelada"
+    },
+    {
+      "id": "herramientas",
+      "nombre": "Herramientas",
+      "categoria": "manufactura",
+      "precio_mercado": 45.00,
+      "precio_natural": 40.00,
+      "componentes": {
+        "salarios": 20.25,
+        "beneficios": 13.50,
+        "rentas": 11.25
+      },
+      "historial_precios": {
+        "natural": [38.00, 39.00, 39.50, 39.80, 40.00],
+        "mercado": [40.00, 42.00, 43.00, 44.00, 45.00]
+      },
+      "oferta": 500,
+      "demanda": 600,
+      "pais": "VE",
+      "unidad": "unidad"
+    },
+    {
+      "id": "pan",
+      "nombre": "Pan",
+      "categoria": "alimentos",
+      "precio_mercado": 2.50,
+      "precio_natural": 2.20,
+      "componentes": {
+        "salarios": 1.13,
+        "beneficios": 0.75,
+        "rentas": 0.63
+      },
+      "historial_precios": {
+        "natural": [2.00, 2.10, 2.15, 2.18, 2.20],
+        "mercado": [2.10, 2.20, 2.30, 2.40, 2.50]
+      },
+      "oferta": 2000,
+      "demanda": 2500,
+      "pais": "VE",
+      "unidad": "kg"
+    },
+    {
+      "id": "ropa",
+      "nombre": "Ropa",
+      "categoria": "textiles",
+      "precio_mercado": 35.00,
+      "precio_natural": 30.00,
+      "componentes": {
+        "salarios": 15.75,
+        "beneficios": 10.50,
+        "rentas": 8.75
+      },
+      "historial_precios": {
+        "natural": [28.00, 29.00, 29.50, 29.80, 30.00],
+        "mercado": [30.00, 32.00, 33.00, 34.00, 35.00]
+      },
+      "oferta": 300,
+      "demanda": 400,
+      "pais": "VE",
+      "unidad": "unidad"
+    },
+    {
+      "id": "vivienda",
+      "nombre": "Vivienda",
+      "categoria": "construccion",
+      "precio_mercado": 50000.00,
+      "precio_natural": 45000.00,
+      "componentes": {
+        "salarios": 22500.00,
+        "beneficios": 15000.00,
+        "rentas": 12500.00
+      },
+      "historial_precios": {
+        "natural": [40000.00, 42000.00, 43000.00, 44000.00, 45000.00],
+        "mercado": [42000.00, 44000.00, 46000.00, 48000.00, 50000.00]
+      },
+      "oferta": 50,
+      "demanda": 80,
+      "pais": "VE",
+      "unidad": "m2"
+    },
+    {
+      "id": "trigo_co",
+      "nombre": "Trigo",
+      "categoria": "agricultura",
+      "precio_mercado": 280.00,
+      "precio_natural": 250.00,
+      "componentes": {
+        "salarios": 126.00,
+        "beneficios": 84.00,
+        "rentas": 70.00
+      },
+      "historial_precios": {
+        "natural": [230.00, 240.00, 245.00, 248.00, 250.00],
+        "mercado": [240.00, 250.00, 260.00, 270.00, 280.00]
+      },
+      "oferta": 1200,
+      "demanda": 1100,
+      "pais": "CO",
+      "unidad": "tonelada"
+    },
+    {
+      "id": "cafe",
+      "nombre": "Café",
+      "categoria": "agricultura",
+      "precio_mercado": 320.00,
+      "precio_natural": 290.00,
+      "componentes": {
+        "salarios": 144.00,
+        "beneficios": 96.00,
+        "rentas": 80.00
+      },
+      "historial_precios": {
+        "natural": [270.00, 280.00, 285.00, 288.00, 290.00],
+        "mercado": [280.00, 290.00, 300.00, 310.00, 320.00]
+      },
+      "oferta": 600,
+      "demanda": 700,
+      "pais": "CO",
+      "unidad": "tonelada"
+    },
+    {
+      "id": "bananas",
+      "nombre": "Bananas",
+      "categoria": "agricultura",
+      "precio_mercado": 1.20,
+      "precio_natural": 1.00,
+      "componentes": {
+        "salarios": 0.54,
+        "beneficios": 0.36,
+        "rentas": 0.30
+      },
+      "historial_precios": {
+        "natural": [0.90, 0.95, 0.98, 0.99, 1.00],
+        "mercado": [1.00, 1.05, 1.10, 1.15, 1.20]
+      },
+      "oferta": 5000,
+      "demanda": 6000,
+      "pais": "CO",
+      "unidad": "kg"
+    }
+  ],
+  "mercados": [
+    {
+      "id": "mercado_ve",
+      "nombre": "Mercado de Venezuela",
+      "pais": "VE",
+      "productos": ["trigo", "maiz", "herramientas", "pan", "ropa", "vivienda"],
+      "configuracion": {
+        "factor_oferta_demanda": 1.2,
+        "volatilidad_precio": 0.15,
+        "inflacion_anual": 0.25
+      }
+    },
+    {
+      "id": "mercado_co",
+      "nombre": "Mercado de Colombia",
+      "pais": "CO",
+      "productos": ["trigo_co", "cafe", "bananas"],
+      "configuracion": {
+        "factor_oferta_demanda": 1.1,
+        "volatilidad_precio": 0.10,
+        "inflacion_anual": 0.08
+      }
+    }
+  ],
+  "indicadores_economicos": {
+    "venezuela": {
+      "inflacion_anual": 25.0,
+      "pib_per_capita": 3500,
+      "tasa_desempleo": 15.0,
+      "salario_minimo": 150
+    },
+    "colombia": {
+      "inflacion_anual": 8.0,
+      "pib_per_capita": 6500,
+      "tasa_desempleo": 10.0,
+      "salario_minimo": 300
+    }
+  }
+} 

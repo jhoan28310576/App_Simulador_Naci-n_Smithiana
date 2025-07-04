@@ -5,6 +5,7 @@ import (
 	"strconv"
 
 	"cap1_division_del_trabajo/internal/database"
+	"cap1_division_del_trabajo/internal/handlers"
 	"cap1_division_del_trabajo/internal/models"
 
 	"github.com/gin-gonic/gin"
@@ -468,5 +469,38 @@ func main() {
 		})
 	})
 
-	router.Run(":8080")
+	// ===== ENDPOINTS DEL CAPÍTULO 6 - COMPONENTES DEL PRECIO =====
+
+	// Cargar datos del Capítulo 6
+	handlers.CargarDatosCap6()
+
+	// Ruta para la página del simulador del Capítulo 6
+	router.GET("/cap6", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "cap6_simulador.html", gin.H{
+			"title": "Simulador de Componentes del Precio - Capítulo 6",
+		})
+	})
+
+	// Endpoint para obtener todos los productos del Capítulo 6
+	router.GET("/api/cap6/productos", handlers.GetProductos)
+
+	// Endpoint para obtener un producto específico del Capítulo 6
+	router.GET("/api/cap6/producto/:id", handlers.GetProducto)
+
+	// Endpoint para obtener productos por país del Capítulo 6
+	router.GET("/api/cap6/productos-pais/:pais", handlers.GetProductosPorPais)
+
+	// Endpoint para simular cambios en oferta/demanda del Capítulo 6
+	router.GET("/api/cap6/simular/:id", handlers.SimularMercado)
+
+	// Endpoint para obtener indicadores económicos del Capítulo 6
+	router.GET("/api/cap6/indicadores", handlers.GetIndicadoresEconomicos)
+
+	// Endpoint para obtener mercados del Capítulo 6
+	router.GET("/api/cap6/mercados", handlers.GetMercados)
+
+	// Endpoint para análisis de componentes de precio del Capítulo 6
+	router.GET("/api/cap6/analizar/:id", handlers.AnalizarComponentes)
+
+	router.Run(":0808")
 }
