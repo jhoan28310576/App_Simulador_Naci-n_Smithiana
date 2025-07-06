@@ -154,6 +154,8 @@ Especializarse más al llegar a ciudades virtuales.
 
 
 cap3
+
+
 https://github.com/user-attachments/assets/88d0611a-0d2c-4576-9d71-be916659e322
 
 
