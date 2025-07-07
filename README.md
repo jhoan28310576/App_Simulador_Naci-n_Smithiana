@@ -488,3 +488,5 @@ muestra cap6
 https://github.com/user-attachments/assets/1681108a-d62f-4482-8c1a-dfc345c6b552
 
 ⭐ **¡Dale una estrella si te gustó el proyecto!**
+
+siguentes capitulos en desarrollo 7,8,9 ...libro las riquezas de las naciones.
