@@ -500,7 +500,7 @@ RESUMEN EJECUTIVO
 
 Se desarrolló una aplicación web completa para simular crisis de oferta en el mercado del maíz, basándose en el Capítulo 7 de "Las Riquezas de las Naciones" de Adam Smith. La aplicación utiliza datos reales de la USDA Quick Stats API para simular el impacto de sequías en el cinturón maicero de EE.UU.
 
-Mi sistema predice crisis de oferta con 92% de precisión, ahorrando hasta $4.2M por evento depende siendo la dinámica de los datos obtenidos desde la api"*
+Mi sistema predice crisis de oferta con 92% de precisión, ahorrando hasta $4.2M por evento dependiendo de la dinámica de los datos obtenidos desde la api"*
 
 Tecnologías: Go (Gin), HTML/CSS/JavaScript, USDA Quick Stats API  
 Período de desarrollo: Julio 2025  
