@@ -234,3 +234,7 @@ https://github.com/user-attachments/assets/daf7dd9d-2212-4848-a9c0-ec0e9e24bea8
 
 
 **Desarrollado con ❤️ para el estudio de la economía clásica** 
+
+--- 
+
+siguientes capitulos en desarrollo 8,9
