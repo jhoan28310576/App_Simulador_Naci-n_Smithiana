@@ -1,10 +1,39 @@
-Vamos a analizar Libro I, Capítulos 1-3 de La Riqueza de las Naciones con un enfoque práctico para la app. 
+Vamos a analizar Libro I, Capítulos 1-3 y 4,5,6 de La Riqueza de las Naciones con un enfoque práctico para la app. 
 
 este es el comienzo de la traduccionesen digital  de los libros de economia mas destacados como adam smith, karl marx el capital entre otros grandes economistas...
 
 importante leer Informe las riquezas de las naciones adam smith CAP 1,2,3  [Informe las riquezas de las naciones adam smith CAP 1,2,3 .pdf](https://github.com/user-attachments/files/20985888/Informe.las.riquezas.de.las.naciones.adam.smith.CAP.1.2.3.pdf)
 
 Informe las riquezas de las naciones adam smith   cap  4, 5, 6 [Informe las riquezas de las naciones adam smith   cap  4, 5, 6.pdf](https://github.com/user-attachments/files/21048774/Informe.las.riquezas.de.las.naciones.adam.smith.cap.4.5.6.pdf)
+
+este proyecto tiene un alcanze de analizar cada teoria y llevarlo a codigo  para aplicarlos en economia reales  si es posible los libros son:
+
+ A[Adam Smith--->La Riqueza de las Naciones] Mano invisible, División del trabajo, Teoría del valor...
+ 
+ B[Karl Marx--->El Capital] --> Plusvalía, Crisis cíclicas, Colectivización...
+ 
+ C[Keynes--->Teoría General...] --> Intervención estatal, Demanda agregada, Multiplicador...
+ 
+ D[Von Mises--->La Acción Humana] --> Praxeología, Cálculo económico, Anti-intervencionismo....
+ 
+ E[Schumpeter--->Historia Análisis Económico] --> Destrucción creativa, Innovación, Ciclos largos...
+ 
+ F[Banerjee/Duflo--->Buena Economía...] --> Evidencia empírica Políticas focalizadas Impacto social....
+ 
+ G[Harford--->Economista Camuflado] --> Microeconomía cotidiana Teoría de juegos Fijación de precios...
+ 
+ H[Ha-Joon Chang--->Economía 99%] --> Heterodoxia, Proteccionismo selectivo, Institucionalismo...
+ 
+ I[Lynch--->Un paso adelante...] --> Inversión práctica, Valor intrínseco, Mercados eficientes...
+ 
+ J[De Santis--->Economía Argentina] --> 🇦🇷 Economías periféricas, Crisis cambiarias, Desarrollo asimétrico....
+ 
+ K[Abadía--->Economía para Dummies] -->Pedagogía económica, Mecanismos básicos, Crisis explicables...
+ 
+ L[Thaler--->Un pequeño empujón] --> Economía conductual, Nudging, Sesgos cognitivos....
+ 
+ S --> Módulos del Simulador: - Bancario centralizado (Go) - Mercado laboral dinámico - Sistema impositivo adaptable - Indicadores macro/micro - Escenarios de política
+https://github.com/jhoan28310576/App-Bancario.git
 
 
 Capítulo 1: "De la división del trabajo"
@@ -154,6 +183,8 @@ Especializarse más al llegar a ciudades virtuales.
 
 
 cap3
+
+
 https://github.com/user-attachments/assets/88d0611a-0d2c-4576-9d71-be916659e322
 
 
@@ -457,3 +488,5 @@ muestra cap6
 https://github.com/user-attachments/assets/1681108a-d62f-4482-8c1a-dfc345c6b552
 
 ⭐ **¡Dale una estrella si te gustó el proyecto!**
+
+siguentes capitulos en desarrollo 7,8,9 ...libro las riquezas de las naciones.
