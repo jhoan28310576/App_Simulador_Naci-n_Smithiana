@@ -227,5 +227,10 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 Para preguntas o soporte, crear un issue en el repositorio.
 
 ---
+muestratra cap7
+
+
+https://github.com/user-attachments/assets/daf7dd9d-2212-4848-a9c0-ec0e9e24bea8
+
 
 **Desarrollado con ❤️ para el estudio de la economía clásica** 
