@@ -1,6 +1,8 @@
 # 🌾 Simulación de Crisis de Oferta - Las Riquezas de las Naciones
 
 > Aplicación web para simular crisis de oferta en el mercado del maíz, basada en el Capítulo 7 de "Las Riquezas de las Naciones" de Adam Smith.
+informe codigo  [Informe sobre el libro las riquezas de las naciones adam smith  App cap 7.pdf](https://github.com/user-attachments/files/21186045/Informe.sobre.el.libro.las.riquezas.de.las.naciones.adam.smith.App.cap.7.pdf)
+
 
 ## 🎯 Descripción
 
