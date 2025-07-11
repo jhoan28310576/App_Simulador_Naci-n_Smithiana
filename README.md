@@ -240,23 +240,23 @@ marketValue = 1000 + (radius - 10) × 100 + population × 5
 
 Este módulo forma parte de una aplicación educativa basada en "La Riqueza de las Naciones" de Adam Smith. El Capítulo 4 explora cómo surge el dinero para resolver los problemas del trueque y permite experimentar con monedas virtuales basadas en metales preciosos.
 
-## Conceptos clave
+Conceptos clave
 - **Problemas del trueque:** Doble coincidencia de necesidades, dificultad para dividir bienes.
 - **Surgimiento del dinero:** Uso de metales preciosos (oro, plata, cobre) como medio de intercambio universal y acuñación de monedas.
 - **Funciones del dinero:** Medio de intercambio, depósito de valor, unidad de cuenta.
 
-## Funcionalidades principales
+Funcionalidades principales
 - Simulación del sistema de trueque y su evolución hacia el uso del dinero.
 - Visualización y conversión entre monedas virtuales: oro, plata y cobre.
 - Historial de valores de cada moneda y su relación con el oro.
 - Interfaz interactiva para experimentar con conversiones y valores históricos.
 - Visualización de usuarios y sus saldos en diferentes monedas.
 
-## Tecnologías utilizadas
+ Tecnologías utilizadas
 - Backend: Go (Golang) + Gin
 - Frontend: HTML, CSS, JavaScript, Bootstrap, Chart.js
 
-## ¿Cómo ejecutar?
+¿Cómo ejecutar?
 1. Clona el repositorio y entra al directorio del capítulo 4:
    ```bash
    git clone <repo-url>
@@ -268,7 +268,7 @@ Este módulo forma parte de una aplicación educativa basada en "La Riqueza de l
    ```
 3. Abre tu navegador en [http://localhost:8080/dinero](http://localhost:8080/dinero)
 
-## Estructura de carpetas relevante
+Estructura de carpetas relevante
 - `main.go` - Servidor principal y endpoints
 - `internal/models/` - Lógica de monedas y conversiones
 - `templates/dinero.html` - Interfaz del capítulo 4
@@ -276,7 +276,7 @@ Este módulo forma parte de una aplicación educativa basada en "La Riqueza de l
 - `assets/css/dinero.css` - Estilos personalizados
 - `doc/cap 4, 5. 6/cap4.txt` - Resumen teórico y guía de implementación
 
-## Créditos
+Créditos
 Desarrollado como recurso educativo para comprender el origen y la función del dinero en la economía clásica. 
 
 muestra
@@ -287,23 +287,23 @@ https://github.com/user-attachments/assets/bc8a9b2c-e450-43fa-a254-d6d2f708b9df
 
 
 --------------------------------------------------------------------------------------------------------------------------------
-# Simulador Educativo - Capítulo 5: Precios Reales vs Nominales
+ Simulador Educativo - Capítulo 5: Precios Reales vs Nominales
 
 Este módulo forma parte de una aplicación educativa interactiva basada en "La Riqueza de las Naciones" de Adam Smith. El Capítulo 5 explora la diferencia entre el valor real (horas de trabajo) y el valor nominal (dinero) de los productos, mostrando el impacto de la inflación con datos reales.
 
-## Funcionalidades principales
+Funcionalidades principales
 - **Comparación de precios reales y nominales** de productos básicos.
 - **Visualización de la inflación** histórica de Venezuela y Colombia usando datos del World Bank.
 - **Simulación del efecto de la inflación** sobre el poder adquisitivo y los precios nominales.
 - **Historial de precios** para cada producto, con registro de cada actualización.
 - **Calculadora interactiva** de poder adquisitivo.
 
-## Tecnologías utilizadas
+Tecnologías utilizadas
 - Backend: Go (Golang) + Gin
 - Frontend: HTML, CSS, JavaScript, Bootstrap, Chart.js
 - API de datos: World Bank (Data360)
 
-## ¿Cómo ejecutar?
+¿Cómo ejecutar?
 1. Clona el repositorio y entra al directorio del capítulo 5:
    ```bash
    git clone <repo-url>
@@ -315,14 +315,14 @@ Este módulo forma parte de una aplicación educativa interactiva basada en "La 
    ```
 3. Abre tu navegador en [http://localhost:8080/precios](http://localhost:8080/precios)
 
-## Estructura de carpetas relevante
+Estructura de carpetas relevante
 - `main.go` - Servidor principal y endpoints
 - `internal/models/precios_dual.go` - Lógica de productos y precios
 - `templates/precios.html` - Interfaz del capítulo 5
 - `assets/js/precios.js` - Lógica frontend de precios e inflación
 - `assets/css/precios.css` - Estilos personalizados
 
-## Créditos
+Créditos
 Desarrollado como recurso educativo para comprender economía clásica y el impacto de la inflación en la vida real. 
 
 muestra
@@ -332,28 +332,28 @@ https://github.com/user-attachments/assets/d31de5d2-2652-4381-92c1-f563f9b665ff
 
 
 -------------------------------------------------------------------------------------------------------------------------------
-# 📊 Simulador de Componentes del Precio - Capítulo 6 (Adam Smith)
+📊 Simulador de Componentes del Precio - Capítulo 6 (Adam Smith)
 
-> **"De los componentes del precio de las mercancías"** - La Riqueza de las Naciones
+> "De los componentes del precio de las mercancías"** - La Riqueza de las Naciones
 
-## 🎯 Descripción
+Descripción
 
-Simulador interactivo que demuestra los principios económicos del **Capítulo 6** de Adam Smith, mostrando cómo se descompone el precio de las mercancías en sus tres componentes fundamentales:
+Simulador interactivo que demuestra los principios económicos del Capítulo 6 de Adam Smith, mostrando cómo se descompone el precio de las mercancías en sus tres componentes fundamentales:
 
-- **Salarios** (remuneración del trabajo)
-- **Beneficios** (remuneración del capital) 
-- **Rentas** (remuneración de la tierra)
+- Salarios (remuneración del trabajo)
+- Beneficios (remuneración del capital) 
+- Rentas (remuneración de la tierra)
 
 ## 🚀 Características
 
-### ✨ Funcionalidades Principales
+ ✨ Funcionalidades Principales
 - **Desglose de Precios**: Visualización de los componentes del precio según Adam Smith
 - **Simulador de Mercado**: Modificar oferta y demanda para ver cambios en precios
 - **Historial de Precios**: Seguimiento de precios natural vs mercado
 - **Indicadores Económicos**: Datos por país (Venezuela, Colombia)
 - **Análisis Visual**: Gráficos interactivos con Chart.js
 
-### 📈 Componentes del Precio
+📈 Componentes del Precio
 ```json
 {
   "precio_mercado": 250.00,
@@ -365,7 +365,7 @@ Simulador interactivo que demuestra los principios económicos del **Capítulo 6
 }
 ```
 
-## 🛠️ Tecnologías
+🛠️ Tecnologías
 
 - **Backend**: Go + Gin Framework
 - **Frontend**: HTML5 + CSS3 + JavaScript
@@ -373,7 +373,7 @@ Simulador interactivo que demuestra los principios económicos del **Capítulo 6
 - **UI**: Bootstrap 5
 - **Iconos**: Font Awesome
 
-## 📁 Estructura del Proyecto
+📁 Estructura del Proyecto
 
 ```
 cap6_simulador/
@@ -390,13 +390,13 @@ cap6_simulador/
         └── cap6.css           # Estilos específicos
 ```
 
-## 🚀 Instalación y Uso
+🚀 Instalación y Uso
 
-### Prerrequisitos
+Prerrequisitos
 - Go 1.16+
 - Navegador web moderno
 
-### Ejecutar
+Ejecutar
 ```bash
 # Clonar repositorio
 git clone [url-del-repositorio]
@@ -408,11 +408,11 @@ cd cap1_division_del_trabajo/cap1_division_del_trabajo
 go run main.go
 ```
 
-### Acceder
+Acceder
 - **URL**: `http://localhost:8081/cap6`
 - **API**: `http://localhost:8081/api/cap6/*`
 
-## 📡 API Endpoints
+📡 API Endpoints
 
 | Endpoint | Método | Descripción |
 |----------|--------|-------------|
@@ -422,7 +422,7 @@ go run main.go
 | `/api/cap6/indicadores` | GET | Indicadores económicos |
 | `/api/cap6/analizar/:id` | GET | Análisis de componentes |
 
-### Ejemplo de Uso API
+Ejemplo de Uso API
 ```bash
 # Obtener productos
 curl http://localhost:8081/api/cap6/productos
@@ -431,55 +431,55 @@ curl http://localhost:8081/api/cap6/productos
 curl "http://localhost:8081/api/cap6/simular/trigo?oferta=1200&demanda=1000"
 ```
 
-## 📊 Productos Incluidos
+📊 Productos Incluidos
 
-- **Trigo** (Venezuela) - $250/tonelada
-- **Maíz** (Venezuela) - $180/tonelada  
-- **Herramientas** (Venezuela) - $45/unidad
-- **Café** (Colombia) - $320/tonelada
-- **Bananas** (Colombia) - $1.20/kg
+- Trigo(Venezuela) - $250/tonelada
+- Maíz (Venezuela) - $180/tonelada  
+- herramientas (Venezuela) - $45/unidad
+- Café (Colombia) - $320/tonelada
+- Bananas (Colombia) - $1.20/kg
 
-## 🎨 Características de la UI
+🎨 Características de la UI
 
-- **Nav Blanco**: Diseño limpio con navegación blanca
-- **Gradiente de Fondo**: Estilo moderno con gradientes
-- **Cards Transparentes**: Efecto glassmorphism
-- **Responsive**: Adaptable a móviles y tablets
-- **Gráficos Interactivos**: Visualización de datos en tiempo real
+- Nav Blanco: Diseño limpio con navegación blanca
+- Gradiente de Fondo: Estilo moderno con gradientes
+- Cards Transparentes: Efecto glassmorphism
+- Responsive: Adaptable a móviles y tablets
+- Gráficos Interactivos: Visualización de datos en tiempo real
 
-## 🔧 Configuración
+🔧 Configuración
 
-### Variables de Entorno
+Variables de Entorno
 ```bash
 # Puerto del servidor (opcional)
 PORT=8080
 ```
 
-### Personalización de Datos
+Personalización de Datos
 Editar `internal/database/data_cap6.json` para:
 - Agregar nuevos productos
 - Modificar precios y componentes
 - Cambiar indicadores económicos
 
-## 📚 Conceptos Económicos
+📚 Conceptos Económicos
 
-### Precio Natural vs Precio de Mercado
-- **Precio Natural**: Costo de producción (salarios + beneficios + rentas)
-- **Precio de Mercado**: Determinado por oferta y demanda
+Precio Natural vs Precio de Mercado
+- Precio Natural: Costo de producción (salarios + beneficios + rentas)
+- Precio de Mercado: Determinado por oferta y demanda
 
-### Fórmula de Simulación
+Fórmula de Simulación
 ```
 Precio Mercado = Precio Natural × (Demanda / Oferta)
 ```
 
-## 📄 Licencia
+📄 Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
 
-## 👨‍💻 Autor
+👨‍💻 Autor
 
-**Adam Smith** - *Conceptos económicos originales*
-**Desarrollador** - *Implementación técnica*
+Adam Smith - *Conceptos económicos originales*
+Desarrollador- *Implementación técnica*
 
 ---
 
@@ -487,6 +487,44 @@ muestra cap6
 
 https://github.com/user-attachments/assets/1681108a-d62f-4482-8c1a-dfc345c6b552
 
-⭐ **¡Dale una estrella si te gustó el proyecto!**
+⭐ ¡Dale una estrella si te gustó el proyecto!
+
+capitulo  7 del libro las riquezas de las naciones.
+Capítulo 7 - Las Riquezas de las Naciones (Adam Smith)
+
+---
+
+RESUMEN EJECUTIVO
+
+Se desarrolló una aplicación web completa para simular crisis de oferta en el mercado del maíz, basándose en el Capítulo 7 de "Las Riquezas de las Naciones" de Adam Smith. La aplicación utiliza datos reales de la USDA Quick Stats API para simular el impacto de sequías en el cinturón maicero de EE.UU.
+
+Tecnologías: Go (Gin), HTML/CSS/JavaScript, USDA Quick Stats API  
+Período de desarrollo: Julio 2025  
+Estado: ✅ Funcional y operativa
+
+---
+
+1. CONTEXTO TEÓRICO
+
+1.1 Fundamentos Económicos (Adam Smith - Capítulo 7)
+- Crisis de Oferta: Situaciones donde la oferta de un bien disminuye significativamente
+- Impacto en Precios: Reducción de oferta → Incremento de precios
+- Efectos Económicos: Pérdidas de producción, inflación, impacto en consumidores
+- Cinturón Maicero: Región agrícola crítica de EE.UU. (Iowa, Illinois, Nebraska, etc.)
+
+1.2 Escenario Real Implementado
+- Sequía 2023: Crisis climática en el cinturón maicero estadounidense
+- Datos Reales: Producción de maíz por estado y año
+- Impacto Medible: Pérdidas de producción, incrementos de precios
+
+---
+
+muestra cap7
+
+
+https://github.com/user-attachments/assets/3b602648-c20a-4d47-b813-242469afc341
+
 
 siguentes capitulos en desarrollo 7,8,9 ...libro las riquezas de las naciones.
+
+
