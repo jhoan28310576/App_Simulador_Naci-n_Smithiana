@@ -1,4 +1,4 @@
-Vamos a analizar Libro I, Capítulos 1-3 y 4,5,6 de La Riqueza de las Naciones con un enfoque práctico para la app. 
+Vamos a analizar Libro I, Capítulos 1-3 y 4,5,6 y + de La Riqueza de las Naciones con un enfoque práctico para la app. 
 
 este es el comienzo de la traduccionesen digital  de los libros de economia mas destacados como adam smith, karl marx el capital entre otros grandes economistas...
 
