@@ -488,8 +488,8 @@ muestra cap6
 https://github.com/user-attachments/assets/1681108a-d62f-4482-8c1a-dfc345c6b552
 
 ⭐ ¡Dale una estrella si te gustó el proyecto!
+---
 
-capitulo  7 del libro las riquezas de las naciones.
 Capítulo 7 - Las Riquezas de las Naciones (Adam Smith)
 
 ---
