@@ -1,6 +1,6 @@
-# 🏗️ Arquitectura del Sistema
+ 🏗️ Arquitectura del Sistema
 
-## Diagrama de Arquitectura
+Diagrama de Arquitectura
 
 ```mermaid
 graph TB
@@ -43,7 +43,7 @@ graph TB
     style USDA fill:#fff3e0
 ```
 
-## Flujo de Datos
+Flujo de Datos
 
 ```mermaid
 sequenceDiagram
@@ -64,7 +64,7 @@ sequenceDiagram
     UI->>U: Mostrar resultados
 ```
 
-## Estructura de Componentes
+Estructura de Componentes
 
 ```mermaid
 graph LR
@@ -105,7 +105,7 @@ graph LR
     K --> L
 ```
 
-## Modelo de Datos
+Modelo de Datos
 
 ```mermaid
 erDiagram
@@ -144,26 +144,26 @@ erDiagram
     }
 ```
 
-## Patrones de Diseño Utilizados
+Patrones de Diseño Utilizados
 
-### 1. **MVC (Model-View-Controller)**
-- **Model**: `internal/models/usda.go`
-- **View**: `templates/drought_simulation.html`
-- **Controller**: `internal/handlers/usda_handlers.go`
+1. MVC (Model-View-Controller)
+- Model: internal/models/usda.go
+- View: templates/drought_simulation.html
+- Controller: internal/handlers/usda_handlers.go
 
-### 2. **Service Layer Pattern**
-- **Service**: `internal/services/usda_service.go`
-- **Responsabilidad**: Lógica de negocio y comunicación con API externa
+2. Service Layer Pattern
+- Service: internal/services/usda_service.go
+- Responsabilidad: Lógica de negocio y comunicación con API externa
 
-### 3. **Repository Pattern** (Simplificado)
-- **Data Access**: Manejo de datos de USDA API
-- **Abstracción**: Separación de lógica de datos
+3. Repository Pattern (Simplificado)
+- Data Access: Manejo de datos de USDA API
+- Abstracción: Separación de lógica de datos
 
-### 4. **Dependency Injection**
-- **Handlers**: Reciben servicios como dependencias
-- **Services**: Reciben configuración como dependencias
+4. Dependency Injection
+- Handlers: Reciben servicios como dependencias
+- Services: Reciben configuración como dependencias
 
-## Consideraciones de Seguridad
+Consideraciones de Seguridad
 
 ```mermaid
 graph TD
@@ -177,19 +177,19 @@ graph TD
     H --> I[Respuesta Segura]
 ```
 
-## Escalabilidad
+Escalabilidad
 
-### Horizontal
+Horizontal
 - Múltiples instancias del servidor
 - Load balancer
 - Caché compartido (Redis)
 
-### Vertical
+Vertical
 - Optimización de consultas a API
 - Caché de respuestas
 - Compresión de datos
 
-## Monitoreo y Logging
+Monitoreo y Logging
 
 ```mermaid
 graph LR
@@ -199,7 +199,7 @@ graph LR
     D --> E[Alert System]
 ```
 
-## Deployment
+Deployment
 
 ```mermaid
 graph TD
