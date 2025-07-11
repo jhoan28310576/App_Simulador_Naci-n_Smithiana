@@ -525,6 +525,6 @@ muestra cap7
 https://github.com/user-attachments/assets/3b602648-c20a-4d47-b813-242469afc341
 
 
-siguentes capitulos en desarrollo 7,8,9 ...libro las riquezas de las naciones.
+siguentes capitulos en desarrollo 8,9 ...libro las riquezas de las naciones.
 
 
