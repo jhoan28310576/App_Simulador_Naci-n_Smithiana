@@ -334,7 +334,9 @@ https://github.com/user-attachments/assets/d31de5d2-2652-4381-92c1-f563f9b665ff
 -------------------------------------------------------------------------------------------------------------------------------
 📊 Simulador de Componentes del Precio - Capítulo 6 (Adam Smith)
 
-> "De los componentes del precio de las mercancías"** - La Riqueza de las Naciones
+> "De los componentes del precio de las mercancías" - La Riqueza de las Naciones
+[Informe sobre el libro las riquezas de las naciones adam smith  App cap 7.pdf](https://github.com/user-attachments/files/21186032/Informe.sobre.el.libro.las.riquezas.de.las.naciones.adam.smith.App.cap.7.pdf)
+
 
 Descripción
 
