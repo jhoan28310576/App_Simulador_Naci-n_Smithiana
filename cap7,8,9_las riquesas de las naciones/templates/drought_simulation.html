@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simulación de Crisis de Oferta</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/nav.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="assets/logo/Logo64x64.png" alt="logo" />
+        <h1>LOGO</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Capítulo 7:Del precio natural y precio de mercado de las mercancías</a>
+        </li>
+        <li>
+          <a href="#">Capítulo 8: De los salarios del trabajoervices</a>
+        </li>
+        <li>
+          <a href="#">Capítulo 9: De los beneficios del capital</a>
+        </li>
+        <li>
+          <a href="#">Siguientes capítulos</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="#">capitulo 7: Del precio natural y precio de mercado de las mercancías</a>
+        </li>
+        <li>
+          <a href="#">capitulo 8: De los salarios del trabajo</a>
+        </li>
+        <li>
+          <a href="#">capitulo 9: De los beneficios del capital</a>
+        </li>
+        <li>
+          <a href="#">Siguientes capítulos</a>
+        </li>
+      </ul>
+    </div>
+
+    <br />
+   
+    <div class="container">
+      <div class="header">
+        <h1>🌾 Simulación de Crisis de Oferta</h1>
+        <p>Sequía en el Cinturón Maicero de EE.UU. (2023) - Capítulo 7: Las Riquezas de las Naciones</p>
+      </div>
+
+      <div class="content">
+        <div class="simulation-form">
+          <h2>📊 Parámetros de la Simulación</h2>
+
+          <div class="form-group">
+            <label for="year">Año de Referencia:</label>
+            <select id="year">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="states">Estados del Cinturón Maicero:</label>
+            <select id="states" multiple>
+              <option value="IA" selected>Iowa (IA)</option>
+              <option value="IL" selected>Illinois (IL)</option>
+              <option value="NE" selected>Nebraska (NE)</option>
+              <option value="MN" selected>Minnesota (MN)</option>
+              <option value="IN" selected>Indiana (IN)</option>
+              <option value="OH" selected>Ohio (OH)</option>
+              <option value="WI" selected>Wisconsin (WI)</option>
+              <option value="SD" selected>South Dakota (SD)</option>
+              <option value="MO" selected>Missouri (MO)</option>
+              <option value="KS" selected>Kansas (KS)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Severidad de la Sequía (0% - 100%):</label>
+            <div class="slider-container">
+              <input type="range" id="droughtSeverity" class="slider" min="0" max="100" value="30" />
+              <span id="droughtSeverityValue" class="slider-value">30%</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Área Afectada (0% - 100%):</label>
+            <div class="slider-container">
+              <input type="range" id="affectedArea" class="slider" min="0" max="100" value="50" />
+              <span id="affectedAreaValue" class="slider-value">50%</span>
+            </div>
+          </div>
+
+          <button onclick="runSimulation()">🚀 Ejecutar Simulación</button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+          <h3>🔄 Consultando datos de USDA...</h3>
+          <p>Obteniendo datos reales de producción de maíz...</p>
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div id="results" class="results">
+          <div class="result-card">
+            <h3>📈 Impacto Económico de la Sequía</h3>
+            <div class="metric">
+              <span class="metric-label">Producción Original:</span>
+              <span id="originalProduction" class="metric-value">-</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Producción Simulada:</span>
+              <span id="simulatedProduction" class="metric-value">-</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Pérdida de Producción:</span>
+              <span id="productionLoss" class="metric-value">-</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Incremento en Precios:</span>
+              <span id="priceIncrease" class="metric-value">-</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Impacto Económico:</span>
+              <span id="economicImpact" class="metric-value">-</span>
+            </div>
+          </div>
+
+          <div class="result-card">
+            <h3>🗺️ Producción por Estado</h3>
+            <div id="statesGrid" class="states-grid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/nav.js"></script>
+  </body>
+</html>
