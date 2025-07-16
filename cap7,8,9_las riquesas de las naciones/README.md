@@ -1,7 +1,29 @@
 # 🌾 Simulación de Crisis de Oferta - Las Riquezas de las Naciones
 
-> Aplicación web para simular crisis de oferta en el mercado del maíz, basada en el Capítulo 7 de "Las Riquezas de las Naciones" de Adam Smith.
+> Aplicación web para simular crisis de oferta en el mercado del maíz, basada en el Capítulo 7 de " Del precio natural y precio de mercado de las mercancías" de Adam Smith.
 informe codigo  [Informe sobre el libro las riquezas de las naciones adam smith  App cap 7.pdf](https://github.com/user-attachments/files/21186045/Informe.sobre.el.libro.las.riquezas.de.las.naciones.adam.smith.App.cap.7.pdf)
+
+Conceptos Clave:
+
+Precio natural:
+
+Precio que cubre costos de producción (salarios, beneficios, rentas)
+
+"Centro de gravitación" alrededor del cual oscilan los precios de mercado
+
+Precio de mercado:
+
+Determinado por oferta y demanda inmediata
+
+Puede estar por encima o debajo del precio natural
+
+Mecanismo de ajuste:
+
+Cuando precio mercado > precio natural → más productores ingresan → oferta aumenta → precio baja
+
+Cuando precio mercado < precio natural → productores salen → oferta disminuye → precio sube
+
+Aplicación en tu App:
 
 
 ## 🎯 Descripción
