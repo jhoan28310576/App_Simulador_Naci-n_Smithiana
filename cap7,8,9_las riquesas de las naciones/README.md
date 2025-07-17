@@ -369,7 +369,7 @@ https://github.com/user-attachments/assets/2f2ded17-8910-4560-93e6-9daffa836455
 
 
 
-editos de codigo ejecucion y respuesta: 
+editor de codigo ejecucion y respuestas del servidor mientras navegaba  por el aplicacion
 
 
 
