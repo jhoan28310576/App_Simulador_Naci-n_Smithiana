@@ -259,7 +259,7 @@ https://github.com/user-attachments/assets/daf7dd9d-2212-4848-a9c0-ec0e9e24bea8
 **Desarrollado con ❤️ para el estudio de la economía clásica** 
 
 --- 
-Simulación Interactiva: Capítulo 8 – Salarios del Trabajo (Adam Smith)
+# Simulación Interactiva: Capítulo 8 – Salarios del Trabajo (Adam Smith)
 
 Conceptos clave del capítulo:
 Salario natural vs. salario de mercado:
@@ -298,7 +298,7 @@ Contexto
 
 Este proyecto implementa una simulación interactiva basada en el Capítulo 8 de "La Riqueza de las Naciones" de Adam Smith, donde se exploran los conceptos de salario natural, salario de mercado y las fuerzas que determinan la remuneración del trabajo. Utilizando datos reales de la USDA Quick Stats API, la aplicación permite experimentar y visualizar cómo la producción agrícola y la economía influyen en los salarios y el mercado laboral.
 
-Características Principales
+# Características Principales
 
 - Integración con API real: Consulta dinámica a la USDA Quick Stats API para obtener datos de producción agrícola por estado y año.
 - Simulación de salario ajustado: El salario de los trabajadores agrícolas se calcula en función del valor real de la producción, ilustrando el concepto de salario de mercado.
@@ -307,16 +307,21 @@ Características Principales
 - Visualización avanzada: Tablas limpias, gráficos interactivos (Chart.js), modales para ver datos crudos y mensajes informativos para el usuario.
 - Interfaz intuitiva: Inputs para seleccionar año y estado, select con todos los estados de EE.UU., diseño responsive y moderno.
 
-Estructura del Proyecto
+# Estructura del Proyecto:
 
 `cap7,8,9_las riquesas de las naciones/
 ├── cmd/webserver/           # Servidor principal (Go + Gin)
+
 ├── internal/                # Lógica de negocio y handlers
+
 ├── templates/               # HTML de simulación (cap8_simulacion.html)
+
 ├── assets/css/stylecap8.css # Estilos modernos y responsivos
+
 ├── README.md                # Este archivo
+
 `
-Uso
+#  Uso:
 
 1. Inicia el servidor:
 
@@ -331,7 +336,7 @@ Uso
    - Observa cómo cambian los salarios, ofertas y demanda laboral.
    - Visualiza los datos crudos y gráficos interactivos.
 
-Principios Económicos Simulados
+# Principios Económicos Simulados:
 
 - Salario natural vs. salario de mercado:  
   El salario se ajusta según la producción y la demanda, siguiendo la teoría de Adam Smith.
@@ -345,7 +350,7 @@ Tecnologías
 - Frontend: HTML5, CSS3, JavaScript (ES6+), Chart.js, Bootstrap
 - Datos: USDA Quick Stats API (JSON)
 
-Créditos
+#  Créditos:
 
 - Inspirado en el Capítulo 8 de "La Riqueza de las Naciones" de Adam Smith.
 - Datos oficiales: [USDA Quick Stats API](https://quickstats.nass.usda.gov/api)
@@ -360,6 +365,7 @@ cap 8 muestra : año 2022  / estado  iowa / codigo estado: IA
 
 
 
+https://github.com/user-attachments/assets/2f2ded17-8910-4560-93e6-9daffa836455
 
 
 
