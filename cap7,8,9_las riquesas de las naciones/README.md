@@ -261,40 +261,8 @@ https://github.com/user-attachments/assets/daf7dd9d-2212-4848-a9c0-ec0e9e24bea8
 --- 
 # Simulación Interactiva: Capítulo 8 – Salarios del Trabajo (Adam Smith)
 
-Conceptos clave del capítulo:
-Salario natural vs. salario de mercado:
-
-Salario natural: Mínimo necesario para subsistencia del trabajador y su familia (varía según época y lugar).
-
-Salario de mercado: Determinado por la oferta/demanda de trabajo. Puede estar arriba o abajo del natural.
-
-Factores que afectan los salarios:
-
-Estado de la economía:
-
-Economías en crecimiento → ↑ salarios (ej: América colonial).
-
-Economías estancadas → Salarios al nivel de subsistencia (ej: China histórica).
-
-Dificultad del trabajo:
-
-Trabajos peligrosos (minería) o desagradables pagan más.
-
-Costo de aprendizaje:
-
-Oficios que requieren larga formación (orfebrería) compensan con salarios más altos.
-
-Poder de negociación:
-
-"Los dueños del capital siempre tienen ventaja":
-
-Patrones pueden esperar más tiempo en conflictos laborales que los trabajadores.
-
-Leyes a menudo favorecen a los empleadores.
-
-💡 Tesis central de Smith:
-"El salario justo no es el mínimo de subsistencia, sino aquel que permite al trabajador compartir los frutos del progreso económico"
-Contexto
+Teoría:
+“El salario de mercado fluctúa según la oferta y demanda de trabajo; el salario natural es su punto de equilibrio.”
 
 Este proyecto implementa una simulación interactiva basada en el Capítulo 8 de "La Riqueza de las Naciones" de Adam Smith, donde se exploran los conceptos de salario natural, salario de mercado y las fuerzas que determinan la remuneración del trabajo. Utilizando datos reales de la USDA Quick Stats API, la aplicación permite experimentar y visualizar cómo la producción agrícola y la economía influyen en los salarios y el mercado laboral.
 
