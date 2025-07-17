@@ -32,10 +32,17 @@ func main() {
 		api.GET("/corn-production", usdaHandlers.GetCornProduction)
 		api.GET("/corn-production/:state", usdaHandlers.GetCornProductionByState)
 		api.POST("/drought-simulation", usdaHandlers.SimulateDrought)
+		// Endpoint para simulación del cap8
+		api.GET("/cap8/simulacion", usdaHandlers.GetCap8Simulacion)
 	}
 
 	// Página de simulación
 	r.GET("/simulation", usdaHandlers.GetDroughtSimulationForm)
+
+	// Nueva ruta para la simulación del cap8
+	r.GET("/cap8/simulacion", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "cap8_simulacion.html", gin.H{})
+	})
 
 	// Iniciar el servidor en el puerto 8080
 	r.Run(":8080")

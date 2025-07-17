@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulación Capítulo 8 - Salarios y Mercado Laboral</title>
+    <link rel="stylesheet" href="/assets/css/stylecap8.css">
+    <link rel="stylesheet" href="/assets/css/nav.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+
+<body class="bod"> 
+    
+    <nav>
+        <div class="logo">
+          <h1>LOGO</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="\simulation">Capítulo 7: Del precio natural y precio de mercado de las mercancías</a>
+          </li>
+          <li>
+            <a href="/cap8/simulacion">Capítulo 8: De los salarios del trabajoervices</a>
+          </li>
+          <li>
+            <a href="#">Capítulo 9: De los beneficios del capital</a>
+          </li>
+
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+            <a href="/simulation">capitulo 7: Del precio natural y 
+                precio de mercado de las mercancías</a>
+          </li>
+          <li>
+            <a href="/cap8/simulacion">capitulo 8: De los salarios del trabajo</a>
+          </li>
+          <li>
+            <a href="#">capitulo 9: De los beneficios del capital</a>
+          </li>
+
+        </ul>
+      </div>
+  
+      <br />
+
+    <div class="container-main">
+        <h1>Simulación Interactiva - Capítulo 8: De los salarios del trabajo</h1>
+
+        <!-- Inputs para experimentar con año y estado -->
+        <div class="mb-4">
+            <label for="input-anio" class="form-label">Año:</label>
+            <input type="number" id="input-anio" class="form-control d-inline-block w-auto" value="2023" min="2000" max="2023">
+            <label for="input-estado" class="form-label ms-3">Estado:</label>
+            <select id="input-estado" class="form-select d-inline-block w-auto ms-2" style="width: 200px;">
+                <option value="">Seleccionar estado...</option>
+                <option value="AL">AL - Alabama</option>
+                <option value="AK">AK - Alaska</option>
+                <option value="AZ">AZ - Arizona</option>
+                <option value="AR">AR - Arkansas</option>
+                <option value="CA">CA - California</option>
+                <option value="CO">CO - Colorado</option>
+                <option value="CT">CT - Connecticut</option>
+                <option value="DE">DE - Delaware</option>
+                <option value="FL">FL - Florida</option>
+                <option value="GA">GA - Georgia</option>
+                <option value="HI">HI - Hawaii</option>
+                <option value="ID">ID - Idaho</option>
+                <option value="IL">IL - Illinois</option>
+                <option value="IN">IN - Indiana</option>
+                <option value="IA" selected>IA - Iowa</option>
+                <option value="KS">KS - Kansas</option>
+                <option value="KY">KY - Kentucky</option>
+                <option value="LA">LA - Louisiana</option>
+                <option value="ME">ME - Maine</option>
+                <option value="MD">MD - Maryland</option>
+                <option value="MA">MA - Massachusetts</option>
+                <option value="MI">MI - Michigan</option>
+                <option value="MN">MN - Minnesota</option>
+                <option value="MS">MS - Mississippi</option>
+                <option value="MO">MO - Missouri</option>
+                <option value="MT">MT - Montana</option>
+                <option value="NE">NE - Nebraska</option>
+                <option value="NV">NV - Nevada</option>
+                <option value="NH">NH - New Hampshire</option>
+                <option value="NJ">NJ - New Jersey</option>
+                <option value="NM">NM - New Mexico</option>
+                <option value="NY">NY - New York</option>
+                <option value="NC">NC - North Carolina</option>
+                <option value="ND">ND - North Dakota</option>
+                <option value="OH">OH - Ohio</option>
+                <option value="OK">OK - Oklahoma</option>
+                <option value="OR">OR - Oregon</option>
+                <option value="PA">PA - Pennsylvania</option>
+                <option value="RI">RI - Rhode Island</option>
+                <option value="SC">SC - South Carolina</option>
+                <option value="SD">SD - South Dakota</option>
+                <option value="TN">TN - Tennessee</option>
+                <option value="TX">TX - Texas</option>
+                <option value="UT">UT - Utah</option>
+                <option value="VT">VT - Vermont</option>
+                <option value="VA">VA - Virginia</option>
+                <option value="WA">WA - Washington</option>
+                <option value="WV">WV - West Virginia</option>
+                <option value="WI">WI - Wisconsin</option>
+                <option value="WY">WY - Wyoming</option>
+            </select>
+            <button class="btn btn-primary ms-3" onclick="recargarSimulacion()">Actualizar</button>
+        </div>
+
+        <!-- Mensaje de estado -->
+        <div id="mensaje-estado" class="alert alert-info" style="display: none;"></div>
+
+        <!-- Sección 1: Salario ajustado por valor de producción agrícola -->
+        <section id="salario-produccion">
+            <h2>1. Salario ajustado por valor de producción agrícola</h2>
+            <p>
+                En esta sección, el salario base de un agricultor se ajusta automáticamente según el valor real de la producción de maíz en el estado y año seleccionados, usando datos de la API de USDA. Esto ilustra cómo la riqueza generada en el sector puede influir en los salarios del trabajo, como describe Adam Smith.
+            </p>
+            <table class="sim-data" style="width:auto;">
+                <tr><th>Salario base ajustado</th><th>Valor de producción</th><th>Ver datos de la API</th></tr>
+                <tr>
+                    <td id="salario-ajustado"></td>
+                    <td id="valor-produccion"></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" onclick="mostrarModalApi('apiRaw1')">Ver datos de la API</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="explicacion-salario" style="margin-top:1em; color:#555;"></div>
+            <!-- Contenedor para gráfico -->
+            <div style="height: 200px; position: relative; margin-top: 20px;">
+                <canvas id="grafico-salario"></canvas>
+            </div>
+        </section>
+
+        <!-- Sección 2: Número de ofertas laborales según producción -->
+        <section id="ofertas-produccion">
+            <h2>2. Número de ofertas laborales según producción</h2>
+            <p>
+                Aquí simulamos cómo el volumen de producción agrícola puede influir en la cantidad de ofertas laborales disponibles para agricultores. A mayor producción, mayor necesidad de mano de obra, reflejando la relación entre oferta de trabajo y actividad económica.
+            </p>
+            <table class="sim-data" style="width:auto;">
+                <tr><th>Número de ofertas laborales</th><th>Valor de producción</th><th>Ver datos de la API</th></tr>
+                <tr>
+                    <td id="num-ofertas"></td>
+                    <td id="valor-produccion-2"></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" onclick="mostrarModalApi('apiRaw2')">Ver datos de la API</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="explicacion-ofertas" style="margin-top:1em; color:#555;"></div>
+            <!-- Contenedor para gráfico -->
+            <div style="height: 200px; position: relative; margin-top: 20px;">
+                <canvas id="grafico-ofertas"></canvas>
+            </div>
+        </section>
+
+        <!-- Sección 3: Demanda laboral ajustada por año -->
+        <section id="demanda-anual">
+            <h2>3. Demanda laboral ajustada por año</h2>
+            <p>
+                Esta sección muestra cómo la demanda de trabajo agrícola puede variar a lo largo de los años, en función de la producción real de maíz en el estado seleccionado. Permite observar tendencias y su impacto en el mercado laboral.
+            </p>
+            <div id="demanda-anual-data">
+                Cargando datos...
+            </div>
+            <!-- Contenedor para gráfico -->
+            <div style="height: 200px; position: relative; margin-top: 20px;">
+                <canvas id="grafico-demanda"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Bootstrap para mostrar JSON de la API -->
+    <div class="modal fade" id="modalApi" tabindex="-1" aria-labelledby="modalApiLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalApiLabel">Datos crudos de la API</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <pre id="modalApiContent"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="/assets/js/scripcap8.js"></script>
+
+    <script src="/assets/js/nav.js"></script>
+</body>
+
+</html> 

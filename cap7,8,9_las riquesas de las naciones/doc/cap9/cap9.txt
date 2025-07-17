@@ -1,0 +1,100 @@
+Capítulo 9: De los beneficios del capital
+Conceptos Clave:
+Beneficios como remuneración del capital:
+
+Compensación por el riesgo e incomodidad de invertir
+
+Diferente de los salarios (remuneración del trabajo)
+
+Factores que afectan los beneficios:
+
+Riqueza general de la sociedad
+
+Competencia entre capitales
+
+Riesgo de la inversión
+
+Relación salarios-beneficios:
+
+Generalmente inversa: cuando salarios suben, beneficios bajan
+
+Excepto en economías en rápido crecimiento
+
+
+mi app :
+
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+type Inversion struct {
+	capital           float64
+	sector            string
+	riesgo            int
+	beneficioEsperado float64
+}
+
+type ResultadoRetorno struct {
+	Año    int
+	Retorno float64
+	Capital float64
+}
+
+func NewInversion(capital float64, sector string, riesgo int) *Inversion {
+	inv := &Inversion{
+		capital: capital,
+		sector:  sector,
+		riesgo:  riesgo,
+	}
+	inv.beneficioEsperado = inv.calcularBeneficio()
+	return inv
+}
+
+func (i *Inversion) calcularBeneficio() float64 {
+	base := 0.08
+
+	ajusteRiesgo := []float64{0.02, 0.05, 0.08, 0.12, 0.15}
+	if i.riesgo < 1 || i.riesgo > 5 {
+		panic("Riesgo debe estar entre 1 y 5")
+	}
+
+	ajustesSector := map[string]float64{
+		"agricultura": -0.01,
+		"manufactura": 0.02,
+		"comercio":    0.03,
+	}
+
+	ajusteSector := ajustesSector[i.sector] // Default 0 if not found
+
+	return base + ajusteRiesgo[i.riesgo-1] + ajusteSector
+}
+
+func (i *Inversion) simularRetorno(años int) []ResultadoRetorno {
+	rand.Seed(time.Now().UnixNano())
+	resultados := make([]ResultadoRetorno, 0, años)
+	capitalAcumulado := i.capital
+
+	for año := 1; año <= años; año++ {
+		variacion := -0.02 + rand.Float64()*(0.03+0.02)
+		retornoAnual := capitalAcumulado * (i.beneficioEsperado + variacion)
+		capitalAcumulado += retornoAnual
+
+		resultados = append(resultados, ResultadoRetorno{
+			Año:    año,
+			Retorno: retornoAnual,
+			Capital: capitalAcumulado,
+		})
+	}
+
+	return resultados
+}
+
+func main() {
+	inversionAgricola := NewInversion(10000, "agricultura", 3)
+	fmt.Printf("Beneficio esperado: %.2f%%\n", inversionAgricola.beneficioEsperado*100)
+	fmt.Println(inversionAgricola.simularRetorno(5))
+}

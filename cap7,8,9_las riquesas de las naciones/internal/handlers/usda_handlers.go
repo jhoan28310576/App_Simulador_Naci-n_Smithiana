@@ -2,10 +2,12 @@ package handlers
 
 import (
 	"net/http"
+	"strconv"
 	"strings"
 
 	"github.com/jhoan28310576/cap7-8-9_las_riquesas_de_las_naciones/internal/models"
 	"github.com/jhoan28310576/cap7-8-9_las_riquesas_de_las_naciones/internal/services"
+	"github.com/jhoan28310576/cap7-8-9_las_riquesas_de_las_naciones/internal/usdaapi"
 
 	"github.com/gin-gonic/gin"
 )
@@ -136,5 +138,77 @@ func (h *USDAHandlers) GetCornProductionByState(c *gin.Context) {
 		"state": state,
 		"year":  year,
 		"data":  data[0],
+	})
+}
+
+// GetCap8Simulacion combina los tres ejemplos de simulación para el cap8
+func (h *USDAHandlers) GetCap8Simulacion(c *gin.Context) {
+	// Obtener parámetros de la query string
+	anio := c.Query("anio")
+	if anio == "" {
+		anio = "2023"
+	}
+	estado := c.Query("estado")
+	if estado == "" {
+		estado = "IA"
+	}
+
+	// 1. Obtener valor de producción de maíz en el estado y año especificados
+	data, err := usdaapi.GetUSDAData("CORN", anio, estado, "PRODUCTION")
+	valorProduccion := 0.0
+	if err == nil && len(data) > 0 {
+		if v, ok := data[0]["Value"].(string); ok {
+			v = strings.ReplaceAll(v, ",", "")
+			valorProduccion, _ = strconv.ParseFloat(v, 64)
+		}
+	}
+
+	// 1. Salario ajustado por valor de producción
+	salarioBase := 15.0
+	salarioAjustado := salarioBase
+	if valorProduccion > 0 {
+		salarioAjustado += valorProduccion / 1e10 // Ajuste arbitrario
+	}
+
+	// 2. Número de ofertas laborales según producción
+	numOfertas := 2
+	if valorProduccion > 0 {
+		numOfertas += int(valorProduccion / 1e10)
+	}
+
+	// 3. Demanda laboral ajustada por año
+	anios := []string{"2021", "2022", "2023"}
+	demandaAnual := []map[string]interface{}{}
+	apiRawDemanda := make(map[string]interface{})
+	for _, anioConsulta := range anios {
+		dataAnio, _ := usdaapi.GetUSDAData("CORN", anioConsulta, estado, "PRODUCTION")
+		apiRawDemanda[anioConsulta] = dataAnio
+		valorProdAnio := 0.0
+		if len(dataAnio) > 0 {
+			if v, ok := dataAnio[0]["Value"].(string); ok {
+				v = strings.ReplaceAll(v, ",", "")
+				valorProdAnio, _ = strconv.ParseFloat(v, 64)
+			}
+		}
+		numDemandas := 2
+		if valorProdAnio > 1e10 {
+			numDemandas += 1
+		}
+		demandaAnual = append(demandaAnual, map[string]interface{}{
+			"anio":            anioConsulta,
+			"valorProduccion": valorProdAnio,
+			"numDemandas":     numDemandas,
+		})
+	}
+
+	// Responder con el JSON esperado por el frontend, incluyendo los datos crudos
+	c.JSON(http.StatusOK, gin.H{
+		"salarioAjustado": salarioAjustado,
+		"valorProduccion": valorProduccion,
+		"numOfertas":      numOfertas,
+		"demandaAnual":    demandaAnual,
+		"apiRaw1":         data,          // datos crudos para sección 1
+		"apiRaw2":         data,          // datos crudos para sección 2 (igual que 1)
+		"apiRawDemanda":   apiRawDemanda, // datos crudos para cada año en sección 3
 	})
 }

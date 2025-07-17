@@ -1,0 +1,135 @@
+Capítulo 8: De los salarios del trabajo
+Conceptos Clave:
+Salario natural:
+
+Mínimo necesario para subsistencia del trabajador y su familia
+
+Varía según costumbres y época
+
+Salario de mercado:
+
+Determinado por oferta y demanda de trabajo
+
+Influenciado por:
+
+Estado de la economía (crecimiento aumenta salarios)
+
+Facilidad/dificultad del trabajo
+
+Costo de aprendizaje del oficio
+
+Diferencias salariales:
+
+Compensan características del empleo (riesgo, prestigio, etc.)
+en mi app:
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+// Definición de estructuras
+type OfertaLaboral struct {
+	Rol                string
+	Salario            float64
+	ExperienciaRequerida float64
+}
+
+type DemandaLaboral struct {
+	Usuario     string
+	Rol         string
+	Experiencia float64
+}
+
+type MercadoLaboral struct {
+	ofertas  []OfertaLaboral
+	demandas []DemandaLaboral
+}
+
+// Constructor equivalente
+func NewMercadoLaboral() *MercadoLaboral {
+	return &MercadoLaboral{
+		ofertas:  []OfertaLaboral{},
+		demandas: []DemandaLaboral{},
+	}
+}
+
+// Métodos
+func (m *MercadoLaboral) AgregarOfertaLaboral(rol string, salario, experienciaRequerida float64) {
+	m.ofertas = append(m.ofertas, OfertaLaboral{
+		Rol:                rol,
+		Salario:            salario,
+		ExperienciaRequerida: experienciaRequerida,
+	})
+}
+
+func (m *MercadoLaboral) AgregarDemandaLaboral(usuario, rol string, experiencia float64) {
+	m.demandas = append(m.demandas, DemandaLaboral{
+		Usuario:     usuario,
+		Rol:         rol,
+		Experiencia: experiencia,
+	})
+}
+
+func (m *MercadoLaboral) CalcularSalarioMercado(rol string) *float64 {
+	// Filtrar ofertas y demandas por rol
+	var ofertasRol []OfertaLaboral
+	for _, oferta := range m.ofertas {
+		if oferta.Rol == rol {
+			ofertasRol = append(ofertasRol, oferta)
+		}
+	}
+
+	var demandasRol []DemandaLaboral
+	for _, demanda := range m.demandas {
+		if demanda.Rol == rol {
+			demandasRol = append(demandasRol, demanda)
+		}
+	}
+
+	// Verificar si hay datos suficientes
+	if len(ofertasRol) == 0 || len(demandasRol) == 0 {
+		return nil
+	}
+
+	// Calcular salario promedio
+	var sumaSalarios float64
+	for _, oferta := range ofertasRol {
+		sumaSalarios += oferta.Salario
+	}
+	salarioPromedio := sumaSalarios / float64(len(ofertasRol))
+
+	// Calcular ratio demanda/oferta
+	ratio := float64(len(demandasRol)) / float64(len(ofertasRol))
+
+	// Aplicar límites al ratio (0.5 - 2.0)
+	ratioAjustado := math.Max(0.5, math.Min(ratio, 2.0))
+
+	// Calcular salario ajustado
+	salarioAjustado := salarioPromedio * ratioAjustado
+	return &salarioAjustado
+}
+
+func main() {
+	// Ejemplo de uso
+	mercadoTrabajo := NewMercadoLaboral()
+
+	// Empresas ofrecen trabajos
+	mercadoTrabajo.AgregarOfertaLaboral("agricultor", 15, 1)
+	mercadoTrabajo.AgregarOfertaLaboral("agricultor", 18, 2)
+
+	// Trabajadores buscan empleo
+	mercadoTrabajo.AgregarDemandaLaboral("usuario1", "agricultor", 2)
+	mercadoTrabajo.AgregarDemandaLaboral("usuario2", "agricultor", 1)
+	mercadoTrabajo.AgregarDemandaLaboral("usuario3", "agricultor", 3)
+
+	resultado := mercadoTrabajo.CalcularSalarioMercado("agricultor")
+	if resultado != nil {
+		fmt.Printf("Salario de mercado para 'agricultor': %.2f\n", *resultado)
+	} else {
+		fmt.Println("No hay suficientes datos para calcular el salario")
+	}
+}
+
