@@ -274,6 +274,7 @@ Este proyecto implementa una simulación interactiva basada en el Capítulo 8 de
 - Análisis de demanda laboral anual: Visualización de la evolución de la demanda de empleo agrícola a lo largo de varios años.
 - Visualización avanzada: Tablas limpias, gráficos interactivos (Chart.js), modales para ver datos crudos y mensajes informativos para el usuario.
 - Interfaz intuitiva: Inputs para seleccionar año y estado, select con todos los estados de EE.UU., diseño responsive y moderno.
+informe capitulo 8 codigo + : [Informe sobre el libro las riquezas de las naciones adam smith cap 8.pdf](https://github.com/user-attachments/files/21307043/Informe.sobre.el.libro.las.riquezas.de.las.naciones.adam.smith.cap.8.pdf)
 
 # Estructura del Proyecto:
 
@@ -312,7 +313,8 @@ Este proyecto implementa una simulación interactiva basada en el Capítulo 8 de
   La producción agrícola determina la cantidad de ofertas y la demanda de trabajo.
 - Diferencias regionales y temporales: 
   Permite comparar estados y años para analizar tendencias y variaciones reales.
-Tecnologías
+  
+Tecnologías:
 
 - Backend: Go 1.23.2, Gin Framework
 - Frontend: HTML5, CSS3, JavaScript (ES6+), Chart.js, Bootstrap
