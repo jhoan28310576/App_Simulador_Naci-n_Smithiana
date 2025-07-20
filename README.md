@@ -1,6 +1,6 @@
 Vamos a analizar Libro I, Capítulos 1-3 y 4,5,6 y + de La Riqueza de las Naciones con un enfoque práctico para la app. 
 
-este es el comienzo de la traducciones en codigo a app reales de los libros de economia mas destacados como adam smith, karl marx el capital entre otros grandes economistas...
+# este es el comienzo de la traducciones en codigo a app reales de los libros de economia mas destacados como adam smith, karl marx el capital entre otros grandes economistas...
 
 importante leer Informe las riquezas de las naciones adam smith CAP 1,2,3  [Informe las riquezas de las naciones adam smith CAP 1,2,3 .pdf](https://github.com/user-attachments/files/20985888/Informe.las.riquezas.de.las.naciones.adam.smith.CAP.1.2.3.pdf)
 
@@ -35,8 +35,9 @@ este proyecto tiene un alcanze de analizar cada teoria y llevarlo a codigo  para
  S --> Módulos del Simulador: - Bancario centralizado (Go) - Mercado laboral dinámico - Sistema impositivo adaptable - Indicadores macro/micro - Escenarios de política
 https://github.com/jhoan28310576/App-Bancario.git
 
+-----
 
-Capítulo 1: "De la división del trabajo"
+# Capítulo 1: "De la división del trabajo"
 Conceptos Clave:
 Ejemplo de la fábrica de alfileres:
 
@@ -67,7 +68,7 @@ https://github.com/user-attachments/assets/bcf85174-f3ca-4aa9-91d6-69eda9c9f572
 
 
 -----------------------------------------------------------------------------------------------------------------------------
-Capítulo 2: "Del principio que da lugar a la división del trabajo"
+# Capítulo 2: "Del principio que da lugar a la división del trabajo"
 Conceptos Clave:
 Origen de la división del trabajo:
 
@@ -159,7 +160,7 @@ https://github.com/user-attachments/assets/25289fc8-c707-4c7b-a032-9c41e4bd01a2
 
 
 -----------------------------------------------------------------------------------------------------------------------------
-Capítulo 3: "La división del trabajo está limitada por la extensión del mercado"
+# Capítulo 3: "La división del trabajo está limitada por la extensión del mercado"
 Conceptos Clave:
 Relación mercado-especialización:
 
@@ -287,7 +288,7 @@ https://github.com/user-attachments/assets/bc8a9b2c-e450-43fa-a254-d6d2f708b9df
 
 
 --------------------------------------------------------------------------------------------------------------------------------
- Simulador Educativo - Capítulo 5: Precios Reales vs Nominales
+ # Simulador Educativo - Capítulo 5: Precios Reales vs Nominales
 
 Este módulo forma parte de una aplicación educativa interactiva basada en "La Riqueza de las Naciones" de Adam Smith. El Capítulo 5 explora la diferencia entre el valor real (horas de trabajo) y el valor nominal (dinero) de los productos, mostrando el impacto de la inflación con datos reales.
 
@@ -332,7 +333,7 @@ https://github.com/user-attachments/assets/d31de5d2-2652-4381-92c1-f563f9b665ff
 
 
 -------------------------------------------------------------------------------------------------------------------------------
-📊 Simulador de Componentes del Precio - Capítulo 6 (Adam Smith)
+# Simulador de Componentes del Precio - Capítulo 6 (Adam Smith)
 
 > "De los componentes del precio de las mercancías" - La Riqueza de las Naciones
 informe codigo [Informe sobre el libro las riquezas de las naciones adam smith  App cap 7.pdf](https://github.com/user-attachments/files/21186032/Informe.sobre.el.libro.las.riquezas.de.las.naciones.adam.smith.App.cap.7.pdf)
@@ -492,7 +493,7 @@ https://github.com/user-attachments/assets/1681108a-d62f-4482-8c1a-dfc345c6b552
 ⭐ ¡Dale una estrella si te gustó el proyecto!
 ---
 
-Capítulo 7 - Las Riquezas de las Naciones (Adam Smith)
+# Capítulo 7 - Las Riquezas de las Naciones (Adam Smith)
 
 ---
 
