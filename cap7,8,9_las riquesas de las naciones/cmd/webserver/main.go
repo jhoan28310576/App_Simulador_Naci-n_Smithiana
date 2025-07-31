@@ -26,22 +26,28 @@ func main() {
 		})
 	})
 
-	// API endpoints para USDA
+	// API endpoints agrupados
 	api := r.Group("/api")
 	{
+		// Endpoints para USDA (Capítulo 8)
 		api.GET("/corn-production", usdaHandlers.GetCornProduction)
 		api.GET("/corn-production/:state", usdaHandlers.GetCornProductionByState)
 		api.POST("/drought-simulation", usdaHandlers.SimulateDrought)
-		// Endpoint para simulación del cap8
 		api.GET("/cap8/simulacion", usdaHandlers.GetCap8Simulacion)
+
+		// Endpoint para simulación de capital (Capítulo 9)
+		api.POST("/simular-retorno", handlers.SimularRetornoHandler)
 	}
 
-	// Página de simulación
+	// Página de simulación Capítulo 8
 	r.GET("/simulation", usdaHandlers.GetDroughtSimulationForm)
-
 	// Nueva ruta para la simulación del cap8
 	r.GET("/cap8/simulacion", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "cap8_simulacion.html", gin.H{})
+	})
+	// Nueva ruta para la simulación del cap9
+	r.GET("/capital/simulacion", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "capital_simulacion.html", gin.H{})
 	})
 
 	// Iniciar el servidor en el puerto 8080

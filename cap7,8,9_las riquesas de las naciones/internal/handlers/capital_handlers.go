@@ -1,28 +1,3 @@
-Capítulo 9: De los beneficios del capital
-Conceptos Clave:
-Beneficios como remuneración del capital:
-
-Compensación por el riesgo e incomodidad de invertir
-
-Diferente de los salarios (remuneración del trabajo)
-
-Factores que afectan los beneficios:
-
-Riqueza general de la sociedad
-
-Competencia entre capitales
-
-Riesgo de la inversión
-
-Relación salarios-beneficios:
-
-Generalmente inversa: cuando salarios suben, beneficios bajan
-
-Excepto en economías en rápido crecimiento
-
-
-mi app :
-
 package handlers
 
 import (
@@ -51,15 +26,15 @@ func SimularRetornoHandler(c *gin.Context) {
 		return
 	}
 
-	// Convertimos los valores de riesgo y competencia a enteros (redondeando)
+	// Convertimos el valor de riesgo a entero (redondeando) porque es un nivel (1-5)
 	riesgoInt := int(req.Riesgo + 0.5)
-	competenciaInt := int(req.Competencia + 0.5)
 
+	// Creamos la estructura de inversión con los nuevos campos
 	inversion := capital.Inversion{
 		Capital:      req.Capital,
 		Sector:       req.Sector,
 		Riesgo:       riesgoInt,
-		Competencia:  competenciaInt,
+		Competencia:  req.Competencia, // Ahora es float64
 		SalarioMedio: req.SalarioMedio,
 	}
 
@@ -78,8 +53,8 @@ func SimularRetornoHandler(c *gin.Context) {
 	if err != nil {
 		años = 5 // Valor por defecto si hay error
 	}
+
+	// Llamamos a SimularRetorno con la nueva estructura
 	resultado := capital.SimularRetorno(inversion, años)
 	c.JSON(http.StatusOK, gin.H{"historial": resultado, "salario_medio": inversion.SalarioMedio})
 }
-
-
