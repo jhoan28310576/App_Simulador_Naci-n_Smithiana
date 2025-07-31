@@ -350,9 +350,7 @@ https://github.com/user-attachments/assets/387c7fe3-f6e2-4389-9f52-02e1b6dc56b8
 # Capítulo 9: De los salarios y beneficios en los diferentes empleos del trabajo y el capital
 En el marco del proyecto de simulación de los tratados económicos de Adam Smith, el Capítulo 9 de La riqueza de las naciones se centra en el análisis de los beneficios del capital. Smith argumenta que el beneficio es la recompensa al capitalista por asumir el riesgo y la incomodidad de invertir, y que este beneficio está influido por factores como la competencia, el riesgo sectorial y la relación inversa con los salarios, salvo en economías en rápido crecimiento.El objetivo de este módulo es simular de manera realista el comportamiento del capital en diferentes sectores económicos, permitiendo experimentar cómo varían los beneficios esperados según el sector, el nivel de competencia, el riesgo y los salarios promedio, utilizando parámetros ajustables y datos reales (en futuras versiones, integrando la API del World Bank).
 
-Teoría central:
 
-"El beneficio es la recompensa por asumir el riesgo de invertir, no un salario disfrazado."
 
 — Adaptación de Smith
 
