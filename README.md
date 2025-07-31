@@ -2,7 +2,12 @@ Vamos a analizar Libro I, Capítulos 1-3 y 4,5,6 y + de La Riqueza de las Nacion
 
 # este es el comienzo de la traducciones en codigo a app simuladores con datos en  tiempo real de los libros de economia mas destacados como adam smith, karl marx  entre otros grandes economistas...
 
+
+
 desarrollador:jhoan bernal 
+api usadas asta el momento: 
+1) World Bank Open Data: https://data.worldbank.org/
+2) United States Department of Agriculture: https://www.nass.usda.gov/Quick_Stats/
 
 importante leer Informe las riquezas de las naciones adam smith CAP 1,2,3  [Informe las riquezas de las naciones adam smith CAP 1,2,3 .pdf](https://github.com/user-attachments/files/20985888/Informe.las.riquezas.de.las.naciones.adam.smith.CAP.1.2.3.pdf)
 
