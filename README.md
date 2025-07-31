@@ -1,6 +1,6 @@
 Vamos a analizar Libro I, Capítulos 1-3 y 4,5,6 y + de La Riqueza de las Naciones con un enfoque práctico para la app. 
 
-# este es el comienzo de la traducciones en codigo a app reales de los libros de economia mas destacados como adam smith, karl marx  entre otros grandes economistas...
+# este es el comienzo de la traducciones en codigo a app simuladores con datos en  tiempo real de los libros de economia mas destacados como adam smith, karl marx  entre otros grandes economistas...
 
 desarrollador:jhoan bernal 
 
