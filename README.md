@@ -692,6 +692,12 @@ datos de simulacion BR
 
 https://github.com/user-attachments/assets/c0dbfd2c-2fd5-4feb-9f51-201c4d291e90
 
+respuestas del servidor 
+
+
+
+https://github.com/user-attachments/assets/7931861b-6a93-4b7f-b14b-29806ca18669
+
 
 Visualización de evolución de capital y retornos anuales
 
