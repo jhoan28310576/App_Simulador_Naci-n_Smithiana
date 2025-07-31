@@ -530,6 +530,97 @@ muestra cap7
 https://github.com/user-attachments/assets/3b602648-c20a-4d47-b813-242469afc341
 
 
-siguentes capitulos en desarrollo 8,9 ...libro las riquezas de las naciones.
+--- 
+# Simulación Interactiva: Capítulo 8 – Salarios del Trabajo (Adam Smith)
+
+Teoría:
+“El salario de mercado fluctúa según la oferta y demanda de trabajo; el salario natural es su punto de equilibrio.”
+
+Este proyecto implementa una simulación interactiva basada en el Capítulo 8 de "La Riqueza de las Naciones" de Adam Smith, donde se exploran los conceptos de salario natural, salario de mercado y las fuerzas que determinan la remuneración del trabajo. Utilizando datos reales de la USDA Quick Stats API, la aplicación permite experimentar y visualizar cómo la producción agrícola y la economía influyen en los salarios y el mercado laboral.
+
+# Características Principales
+
+- Integración con API real: Consulta dinámica a la USDA Quick Stats API para obtener datos de producción agrícola por estado y año.
+- Simulación de salario ajustado: El salario de los trabajadores agrícolas se calcula en función del valor real de la producción, ilustrando el concepto de salario de mercado.
+- Modelado de ofertas laborales: El número de ofertas laborales se ajusta automáticamente según el volumen de producción, reflejando la relación entre actividad económica y demanda de trabajo.
+- Análisis de demanda laboral anual: Visualización de la evolución de la demanda de empleo agrícola a lo largo de varios años.
+- Visualización avanzada: Tablas limpias, gráficos interactivos (Chart.js), modales para ver datos crudos y mensajes informativos para el usuario.
+- Interfaz intuitiva: Inputs para seleccionar año y estado, select con todos los estados de EE.UU., diseño responsive y moderno.
+informe capitulo 8 codigo + : [Informe sobre el libro las riquezas de las naciones adam smith cap 8.pdf](https://github.com/user-attachments/files/21307043/Informe.sobre.el.libro.las.riquezas.de.las.naciones.adam.smith.cap.8.pdf)
+
+# Estructura del Proyecto:
+
+`cap7,8,9_las riquesas de las naciones/
+├── cmd/webserver/           # Servidor principal (Go + Gin)
+
+├── internal/                # Lógica de negocio y handlers
+
+├── templates/               # HTML de simulación (cap8_simulacion.html)
+
+├── assets/css/stylecap8.css # Estilos modernos y responsivos
+
+├── README.md                # Este archivo
+
+`
+#  Uso:
+
+1. Inicia el servidor:
+
+   go run cmd/webserver/main.go
+
+2. Accede a la simulación:
+ 
+   http://localhost:8080/cap8/simulacion
+   ```
+3. Experimenta:
+   - Selecciona año y estado.
+   - Observa cómo cambian los salarios, ofertas y demanda laboral.
+   - Visualiza los datos crudos y gráficos interactivos.
+
+# Principios Económicos Simulados:
+
+- Salario natural vs. salario de mercado:  
+  El salario se ajusta según la producción y la demanda, siguiendo la teoría de Adam Smith.
+- Oferta y demanda laboral:
+  La producción agrícola determina la cantidad de ofertas y la demanda de trabajo.
+- Diferencias regionales y temporales: 
+  Permite comparar estados y años para analizar tendencias y variaciones reales.
+  
+Tecnologías:
+
+- Backend: Go 1.23.2, Gin Framework
+- Frontend: HTML5, CSS3, JavaScript (ES6+), Chart.js, Bootstrap
+- Datos: USDA Quick Stats API (JSON)
+
+#  Créditos:
+
+- Inspirado en el Capítulo 8 de "La Riqueza de las Naciones" de Adam Smith.
+- Datos oficiales: [USDA Quick Stats API](https://quickstats.nass.usda.gov/api)
+- Desarrollado por: [jhoan bernal]
+
+  cap 8 muestra : año 2023  / estado  california / codigo estado: CA
+  
+
+https://github.com/user-attachments/assets/450572f6-8c4f-45bc-bc09-a1feb764129d
+
+cap 8 muestra : año 2022  / estado  iowa / codigo estado: IA
+
+
+
+https://github.com/user-attachments/assets/2f2ded17-8910-4560-93e6-9daffa836455
+
+
+
+editor de codigo ejecucion y respuestas del servidor mientras navegaba  por el aplicacion
+
+
+
+https://github.com/user-attachments/assets/387c7fe3-f6e2-4389-9f52-02e1b6dc56b8
+
+
+
+siguientes capitulos en desarrollo 9
+💡
+
 
 
